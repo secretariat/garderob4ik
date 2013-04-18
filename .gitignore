@@ -14,4 +14,6 @@
 /log/*.log
 /tmp
 
+*.jpg
+
 #/config/database.yml

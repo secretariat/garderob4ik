@@ -1,10 +1,13 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.11'
+#################################
 gem 'execjs'
 gem 'therubyracer'
 gem 'thin'
 gem 'hirb'
+gem 'will_paginate', '~> 3.0'
+#################################
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
