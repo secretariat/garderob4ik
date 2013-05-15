@@ -1,16 +1,16 @@
 <div style="width:800px;  margin: auto;" >
-	<center><h2><u>Женская обувь</u></h2></center>
-	<% @shoes.each do |shoe| %>
+	<center><h2><u>Oбувь</u></h2></center>
+	<% @items.each do |item| %>
 	<div class="product">
-		<%= image_tag ( image_path( shoe.image_path ) ) %>
-		<span class="brandName"><%= shoe.brandname %></span>
-		<span class="productName"><%= shoe.productname %></span>
-		<span class="price"><%= shoe.price_ua.to_i %> грн.</span>
+		<%= image_tag ( image_path( item.image_path ) ) %>
+		<!-- <span class="brandName"><%#= shoe.brandname %></span> -->
+		<span class="productName"><%= item.productname %></span>
+		<span class="price"><%= item.price_ua.to_i %> грн.</span>
 	</div>
 	<% end %>
 
 	<div class="apple_pagination" style="width:800px; float:left;">
-		<%= will_paginate @shoes %>
+		<%= will_paginate @items %>
 	</div>
 </div>
 

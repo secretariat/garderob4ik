@@ -1,4 +1,4 @@
-class Shoes < ActiveRecord::Base
+class Item < ActiveRecord::Base
 	self.per_page = 40
 
   attr_accessible :image_path,
