@@ -1,0 +1,11 @@
+<div style="width:800px;  margin: auto;" >
+		<div class="product">
+			<span class="brandName"><%= @item.brand.brand_name %></span>
+			<span class="productName"><%= @item.productname %></span>
+			<span class="price"><%= @item.price_ua.to_i %> грн.</span>
+			<% @item.description.images.each do |i| %>
+				<%= image_tag( "/images/descriptions/#{i.thumb_path}" ) %>
+			<% end %>
+	</div>
+</div>
+
