@@ -1,11 +1,19 @@
 <div style="width:800px;  margin: auto;" >
-		<div class="product">
-			<span class="brandName"><%= @item.brand.brand_name %></span>
-			<span class="productName"><%= @item.productname %></span>
-			<span class="price"><%= @item.price_ua.to_i %> грн.</span>
-			<% @item.description.images.each do |i| %>
+	<center>
+		<h3><%= @item.brand.brand_name %><%= @item.productname %></h3>
+		Код товара:<%= '%07d' % @item.id %>
+	</center>
+	<!-- <span class="price"><%= @item.price_ua.to_i %> грн.</span> -->
+	<br>
+	<center>
+		<%= image_tag( "/images/descriptions/#{@item.description.images[0].image_path}" ) %>
+		<br>
+		<br>
+		<% @item.description.images.each do |i| %>
 				<%= image_tag( "/images/descriptions/#{i.thumb_path}" ) %>
-			<% end %>
-	</div>
+		<% end %>
+	</center>
+	<h3>Описание товара:</h3>
+	<%= @item.description.description.html_safe %>
 </div>
 
