@@ -1,21 +1,34 @@
-<div style="width:800px;  margin: auto;" >
-	<center><h2><u>Oбувь</u></h2></center>
-	<% @items.each do |item| %>
-		<div class="product">
-			<% next unless item.description %>
-			<%= link_to gard_path( item.description.id ) do %>
-			<%#= link_to "", gard_show_item( item.description.id )  do %>
-				<%= image_tag ( "/images/#{item.image_path}" ) %>
-				<!-- <span class="brandName"><%#= item.category.gender.gender_name %></span> -->
-				<span class="brandName"><%= item.brand.brand_name %></span>
-				<span class="productName"><%= item.productname %></span>
-				<span class="price"><%= item.price_ua.to_i %> грн.</span>
-			<% end %>
-		</div>
-	<% end %>
 
-	<div class="apple_pagination" style="width:800px; float:left;">
-		<%= will_paginate @items %>
+<div class="page">
+	<div class="header"><h1>HEADER</h1>
 	</div>
+	<div class="left_bar">
+		Filters<br>
+
+	</div>
+	<div class="main">
+		<h2><u>Oбувь</u></h2>
+		<% @items.each do |item| %>
+			<div class="product">
+				<% next unless item.description %>
+				<%= link_to gard_path( item.description.id ) do %>
+				<%#= link_to "", gard_show_item( item.description.id )  do %>
+					<%= image_tag ( "/images/#{item.image_path}" ) %>
+					<!-- <span class="brandName"><%#= item.category.gender.gender_name %></span> -->
+					<span class="brandName"><%= item.brand.brand_name %></span>
+					<span class="productName"><%= item.productname %></span>
+					<span class="price"><%= item.price_ua.to_i %> грн.</span>
+				<% end %>
+			</div>
+		<% end %>
+
+		<div class="apple_pagination">
+			<%= will_paginate @items %>
+		</div>
+	</div>
+<!-- 	<div class="right_bar">
+	</div> -->
+<!-- 	<div class="footer">
+	</div> -->
 </div>
 

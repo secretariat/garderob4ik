@@ -11,6 +11,83 @@
  *= require_self
  *= require_tree .
  */
+body{ margin:0px; }
+.page {
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+ }
+ .header {
+  height: 80px;
+  background: none repeat scroll 0 0 #003636;
+  color: #fff;
+  text-align: center;
+ }
+
+ .left_bar {
+  width: 196px;
+  height: 600px;
+  float: left;
+  border: 1px solid black;
+  border-radius: 4px;
+ 
+ }
+  .right_bar {
+  width: 195px;
+  height: 600px;
+  float: right;
+  border: 1px solid black;
+  border-radius: 4px;
+ }
+ .right_bar .brandimg{
+  height: 35px;
+  background: #000;
+  display: block;
+  color: #fff;
+  text-align: center;
+ }
+  .right_bar .price {
+    border-bottom: 1px solid black;
+    color: #98002E;
+    font-size: 30px;
+    line-height: 0.85em;
+    text-align: center;
+  }
+.right_bar .prop {
+    border-bottom: 1px solid black;
+    color: #000;
+    font-size: 15px;
+    line-height: 0px;
+    text-align: left;
+    padding-left: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+.right_bar .prop p {margin: 0px;}
+.right_bar .prop select {margin-left: auto;}
+.main {
+  width: 800px;
+  margin: auto;
+  float: left;
+
+ }
+.main h2 {
+    text-align: center;
+  }
+.main h3 {
+    margin-bottom: 0px;
+  }
+/*.prodPhotos {
+  width: 550px;
+  height: 53px;
+  display: block;
+  border: 1px dotted black;
+}*/
+.prodInfo h3 {
+    padding-left: 10px;
+    color: #fff;
+    background: none repeat scroll 0 0 #7E8083;
+  }
 .product {
     display: block;
     float: left;
@@ -29,17 +106,6 @@
     text-decoration: underline;
     width: 100%;
 }
-
-/*.product img {
-    display: block;
-    text-decoration: none;
-}*/
-
-/*.product .productImg {
-  height: 198px;
-  width: 170px;
-}*/
-
 .product .brandName {
   font-size: 12px;
   font-weight: bold;
@@ -52,3 +118,25 @@
     font-weight: bold;
     text-decoration: none;
 }
+.footer {
+    background: none repeat scroll 0 0 #363636;
+    height: 232px;
+    width: 100%;
+}
+.apple_pagination {
+  width: 800px;
+  margin-top: 10px;
+  padding: 5px 0px;
+  float:left;
+}
+
+/*.product img {
+    display: block;
+    text-decoration: none;
+}*/
+
+/*.product .productImg {
+  height: 198px;
+  width: 170px;
+}*/
+
