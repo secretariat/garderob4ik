@@ -1,4 +1,3 @@
-
 <div class="page">
 	<div class="header"><h1>HEADER</h1>
 	</div>
@@ -20,13 +19,14 @@
 		</div>
 	</div>
 	<div class="right_bar">
-		<div class="brandimg">brand img</div>
+		<div class="brandimg">brand image</div>
 		<div class="price"><p><%= @item.price_ua.to_i %> грн.</p></div>
 		<div class="prop">
-		<p>Цвет: <%= select_tag( :code, options_from_collection_for_select( @item.colors, "id", "color_name") )  %></p>
-			<br/>
-		<p>
-			Размеры: <%= select_tag( :code, options_from_collection_for_select( @item.sizes, "id", "size_value") )  %></p>
+		<p>Цвет:</p>
+		<p><%= select_tag( :code, options_from_collection_for_select( @item.colors, "id", "color_name") )  %></p>
+			
+		<p>Размеры:</p>
+		<p><%= select_tag( :code, options_from_collection_for_select( @item.sizes, "id", "size_value") )  %></p>
 		</div>
 	</div>
 </div>

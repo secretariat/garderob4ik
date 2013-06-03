@@ -1,13 +1,18 @@
-
+	
 <div class="page">
 	<div class="header"><h1>HEADER</h1>
 	</div>
 	<div class="left_bar">
-		Filters<br>
-
+		<h4 class="fheader">Фильтры отбора:</h4>
 	</div>
 	<div class="main">
-		<h2><u>Oбувь</u></h2>
+		<div class="sort">
+			<h5>Сортировать по:</h5>
+			<h5 class="options">Новизне</h5>
+			<h5 class="options">Популярности</h5>
+			<h5 class="options">Цене&uarr;</h5>
+			<h5 class="options">Цене&darr;</h5>
+		</div>
 		<% @items.each do |item| %>
 			<div class="product">
 				<% next unless item.description %>
