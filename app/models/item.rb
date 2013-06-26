@@ -13,6 +13,7 @@ class Item < ActiveRecord::Base
       						:productname,
       						:price_usd,
       						:price_ua,
-      						:discount
+      						:discount,
+                  :msrp_ua
 
 end

@@ -1,6 +1,7 @@
 	
 <div class="page">
-	<div class="header"><h1>HEADER</h1>
+	<div class="header">
+		<h1>HEADER</h1>
 	</div>
 	<div class="left_bar">
 		<h4 class="fheader">Фильтры отбора:</h4>
@@ -20,9 +21,10 @@
 				<%#= link_to "", gard_show_item( item.description.id )  do %>
 					<%= image_tag ( "/images/#{item.image_path}" ) %>
 					<!-- <span class="brandName"><%#= item.category.gender.gender_name %></span> -->
-					<span class="brandName"><%= item.brand.brand_name %></span>
+					<span class="brandName"><%= item.brand.brand_name_shown %></span>
 					<span class="productName"><%= item.productname %></span>
 					<span class="price"><%= item.price_ua.to_i %> грн.</span>
+					<span>(<%= item.discount %>% <%= item.msrp_ua.to_i %> грн.)</span>
 				<% end %>
 			</div>
 		<% end %>
