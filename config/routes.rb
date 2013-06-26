@@ -1,4 +1,8 @@
 Garderob4ik::Application.routes.draw do
+
+  root :to => 'page#index'
+
+  get "page/index"
   get "gard/all"
 
   resources :gard, only: [ :all, :show ]
