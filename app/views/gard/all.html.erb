@@ -1,0 +1,10 @@
+<% @shoes.each do |shoe| %>
+	<%= image_tag ( image_path( shoe.image_path ) ) %><br/>
+	<%= shoe.brandname %><br/>
+	<%= shoe.productname %><br/>
+	<%= shoe.price_ua.to_i %> грн.<br/>
+<% end %>
+
+<div class="apple_pagination" >
+	<%= will_paginate @shoes %>
+</div>

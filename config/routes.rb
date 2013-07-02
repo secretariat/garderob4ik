@@ -1,4 +1,6 @@
 Garderob4ik::Application.routes.draw do
+  get "gard/all"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
