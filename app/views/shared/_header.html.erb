@@ -1,5 +1,5 @@
 <div class="header">
-		<div class="header_logo"><a href="/page"><img src="/images/site/logo_v2.png"/></a></div>
+		<div class="header_logo"><%= link_to image_tag("logo_v2.png"), "page/index" %></div>
 		<div class="header_center"></div>
 		<div class="header_right right">
 <!-- 			<ul class="upper_menu">
@@ -9,10 +9,10 @@
 				<li><a href="#"><img width="50" src="images/menu/question_balloon.png"/></a></li>
 			<ul> -->
 			<ul class="upper_menu">
-				<li><a href="#"><img width="55" src="menu/key(2).png"/></a></li>
-				<li><a href="#"><img width="55" src="menu/user_f.png"/></a></li>
-				<li><a href="#"><img width="55" src="shopping_basket.png"/></a></li>
-				<li><a href="#"><img width="55" src="question_4.png"/></a></li>
+				<li><%= link_to image_tag("key(2).png", :style => "width: 55px;"), "#" %></li>
+				<li><%= link_to image_tag("user_f.png", :style => "width: 55px;"), "#" %></li>
+				<li><%= link_to image_tag("shopping_basket.png", :style => "width: 55px;"), "#" %></li>
+				<li><%= link_to image_tag("question_4.png", :style => "width: 55px;"), "#" %></li>
 			<ul>
 			<div class="contacts"></div>
 		</div>
