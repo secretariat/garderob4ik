@@ -1,43 +1,69 @@
 <div class="page">
-	<div class="header"><h1>HEADER</h1>
-	</div>
-	<div class="main">
-		<center>
-			<h3><%= @item.brand.brand_name %>  <%= @item.productname %></h3>
-			<p>Код товара:&nbsp&nbsp<%= '%07d' % @item.id %></p>
-
-		<div class="product-image-preview">
-      <div class="inner">
-        <%#= link_to image_tag(@product.image_url), @product.image_url, :for=>'photo0', :title=>"#{link_to("Увеличить изображение", @product.image_url, :target=>"_blank")}"%>
-    		<%= link_to image_tag( "/images/descriptions/#{@item.description.images[0].image_path}" ), "/images/descriptions/#{@item.description.images[0].image_path}", :for=>'photo1', :title=>"#{link_to("Увеличить изображение", "/images/descriptions/#{@item.description.images[0].image_path}", :target=>"_blank")}" %>
-      </div>
-    </div>
-
-		<div class="prodPhotos">
-			<% if @item.description.images.any?%>
-        <div class="product-image-gallery" id="photos_container">
-          <% @item.description.images.each  do |photo|%>
+	<%=render "shared/header"%>
+	<div class="productStage">
+		<hl class="title">
+			<a class="pName"><%= @item.brand.brand_name %></a>
+			<a class="pModel"><%= @item.productname %></a>
+		</hl>
+		<span id="sku" class="sku">Код товара:&nbsp&nbsp<%= '%07d' % @item.id %></span>
+		<div class="displayImages">
+			<div class="modelImages left">
+				<% @item.description.images.each  do |photo|%>
             <%=link_to image_tag("/images/descriptions/#{photo.thumb_path}"), "/images/descriptions/#{photo.image_path}", :class=>"photo", :id => "photo#{photo.id}", :rel=>"lightbox", :title=>"#{link_to("Увеличить изображение", photo.image_path, :target=>"_blank")}" %>
-          <%end%>
-        </div>
-      <%end%>
+        <%end%>
+			</div>
+			<div class="mainImage left">
+				<%= link_to image_tag( "/images/descriptions/#{@item.description.images[0].image_path}" ), "/images/descriptions/#{@item.description.images[0].image_path}", :for=>'photo1', :title=>"#{link_to("Увеличить изображение", "/images/descriptions/#{@item.description.images[0].image_path}", :target=>"_blank")}" %>
+			</div>
+			<div class="colorImages right">
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+			</div>
 		</div>
-		</center>
-		<div class="prodInfo">
-			<h3>Описание товара:</h3>
+	</div>
+	<div class="bar prod right">
+		<a class="bLogo" href="#">
+			<img src="#" alt="Brand"></img>
+		</a>
+		<form id="addItem" class="">
+			<input type="hidden" name="addToCart">
+			<input type="hidden" value="7913331" name="productId">			
+			<ul class="saleInfo">
+				<li class="percentOff">
+					<span>Скидка <%= @item.discount %>%</span>
+				</li>
+				<li>
+					<span class="oldPrice">Без скидки: <%= @item.msrp_ua.to_i %> грн.</span> 
+					<div class="newPrice"><%= @item.price_ua.to_i %> грн.</div>
+				</li>
+				<li class="colors">
+					<label>Цвет:</label>
+					<%= select_tag( :code, options_from_collection_for_select( @item.colors, "id", "color_name") )  %>
+				</li>
+				<li class="colors">
+					<label>Размер:</label>
+					<%= select_tag( :code, options_from_collection_for_select( @item.sizes, "id", "size_value") )  %>
+				</li>
+				<li id="transBtns">
+				<button name="addToCart" type="submit" class="addToCart">
+					Добавить в корзину
+				</button>
+				</li>
+			</ul>
+		</form>
+	</div>
+	<div class="cls"></div>
+	<div class="prodInfo">
+		<h3>Описание товара:</h3>
+		<div class="description">
 			<%= @item.description.description.html_safe %>
 		</div>
 	</div>
-	<div class="right_bar">
-		<div class="brandimg">brand image</div>
-		<div class="price"><p><%= @item.price_ua.to_i %> грн.</p></div>
-		<div class="prop">
-		<p>Цвет:</p>
-		<p><%= select_tag( :code, options_from_collection_for_select( @item.colors, "id", "color_name") )  %></p>
-
-		<p>Размеры:</p>
-		<p><%= select_tag( :code, options_from_collection_for_select( @item.sizes, "id", "size_value") )  %></p>
-		</div>
-	</div>
+	<hr noshade="noshade" size="1"/>
+	<%=render "shared/footer"%>
 </div>
-
