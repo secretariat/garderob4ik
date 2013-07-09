@@ -129,7 +129,7 @@
 				<% next unless item.description %>
 					<%= link_to gard_path( item.description.id ) do %>
 						<%= image_tag ( "/images/#{item.image_path}" ) %>
-						<span class="brandName"><%= item.brand.brand_name %></span>
+						<span class="brandName"><%= item.brand.brand_name_shown %></span>
 						<span class="productName"><%= item.productname %></span>
 						<span class="price">Цена: <%= item.msrp_ua.to_i %> грн. (<%= item.discount %>% OFF)</span>
 						<span class="price red">Новая цена: <%= item.price_ua.to_i %> грн.</span>
