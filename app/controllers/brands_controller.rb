@@ -1,5 +1,5 @@
 class BrandsController < ApplicationController
 	def show
-		@products
+		@items = 
 	end
 end

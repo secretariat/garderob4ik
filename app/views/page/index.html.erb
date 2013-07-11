@@ -7,12 +7,14 @@
 </head>
 <body>
 <div class="page">
-	<%=render "shared/header", :product => product%>
+	<%=render "shared/header"%>
+	<%#=render "shared/header", :product => product%>
 	<div class="main_banner margint5 left">
 		<%= link_to image_tag("big_banner1.jpg"), "#" %>
 	</div>
 	<div class="right_banner margint35 right">
 		<%= link_to image_tag("right_banner1.jpg"), "#" %>
+	</div>
 		<a class="more" href="/gard/all"><h4>More special offers</h4></a>
 		<%#= link_to "More special offers", gard_all_path, :class => "more" %>
 	</div>
@@ -52,7 +54,7 @@
 		</div>
 	</div>
 	<div class="right_banner social margint20 right">
-		<img width="253" src="images/site/social2.jpg"/>
+		<%= image_tag ( "social.png" ) %>
 	</div>
 	<div class="cls"></div>
 	<br>

@@ -1,5 +1,5 @@
 class PageController < ApplicationController
   def index
-  	@barnds = Brand.all.limit(15)
+  	# @barnds = Brand.all.limit(15)
   end
 end
