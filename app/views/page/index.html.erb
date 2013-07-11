@@ -9,8 +9,9 @@
 <div class="page">
 	<%=render "shared/header"%>
 	<div class="brand_line">
-		<% @brands.each do |brand|  %>
-			<%= link_to brand.brand_name.capitalize, brand_path(brand) %>
+		Бренды: <% ("A".."Z").each do |brand|  %>
+			<%= link_to "#{brand}", "#" %>
+			<%#= link_to brand.brand_name.capitalize, brand_path(brand) %>
 		<% end %>
 	</div>
 	<hr noshade="noshade" size="1"/>
