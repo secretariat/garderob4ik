@@ -39,24 +39,9 @@
 	</div>
 	<div class="cls"></div>
 	<div class="brand_line">
-		<a href="#">Бренд</a>
-		<a href="#">Бренд</a>
-		<a href="#">Бренд</a>
-		<a href="#">Бренд</a>
-		<a href="#">Бренд</a>
-		<a href="#">Бренд</a>
-		<a href="#">Бренд</a>
-		<a href="#">Бренд</a>
-		<a href="#">Бренд</a>
-		<a href="#">Бренд</a>
-		<a href="#">Бренд</a>
-		<a href="#">Бренд</a>
-		<a href="#">Бренд</a>
-		<a href="#">Бренд</a>
-		<a href="#">Бренд</a>
-		<a href="#">Бренд</a>
-		<a href="#">Бренд</a>
-		<a href="#">...</a>
+		<% @brands.each do |brand|  %>
+			<%= link_to brand.brand_name.capitalize, brand_path(brand) %>
+		<% end %>
 	</div>
 	<hr noshade="noshade" size="1"/>
 
@@ -70,7 +55,6 @@
 		<li><a href="#">Частые вопросы</a>
 	</ul>
 	<a class="btn right" href="#">Оставить отзыв</a>
-</br>
 </div>
 </body>
 </html>
