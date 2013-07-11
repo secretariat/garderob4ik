@@ -2,12 +2,6 @@
 		<div class="header_logo"><%= link_to image_tag("logo_v2.png"), "page/index" %></div>
 		<div class="header_center"></div>
 		<div class="header_right right">
-<!-- 			<ul class="upper_menu">
-				<li><a href="#"><img width="50" src="images/menu/key.png"/></a></li>
-				<li><a href="#"><img width="50" src="images/menu/users.png"/></a></li>
-				<li><a href="#"><img width="50" src="images/menu/shopping_bag.png"/></a></li>
-				<li><a href="#"><img width="50" src="images/menu/question_balloon.png"/></a></li>
-			<ul> -->
 			<ul class="upper_menu">
 				<li><%= link_to image_tag("key(2).png", :style => "width: 55px;"), "#" %></li>
 				<li><%= link_to image_tag("user_f.png", :style => "width: 55px;"), "#" %></li>
@@ -26,8 +20,11 @@
 		<div class="currency"></div>
 	</div>
 	<div class="search_line">
-		<input></input>
-		<button>Искать</button>
+		<form>
+      <div style="width:487px;height:28px;display:block;">
+      	<input id="products_search" placeholder="Поиск товара"></input>
+        <button type="submit" class="searchbtn right"></button>
+      </form>
 		<a href="#">Актуальные предложения</a>
 		<button class="right">Подписаться</button>
 	</div>
