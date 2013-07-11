@@ -14,7 +14,7 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
-/public/*.jpg
-/public/images/descriptions/*.jpg
+public/images
+
 
 
