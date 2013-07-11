@@ -7,47 +7,48 @@
 </head>
 <body>
 <div class="page">
-	<%=render "shared/header"%>
+	<%=render "shared/header", :product => product%>
 	<div class="main_banner margint5 left">
-		<a href="#"><img src="images/site/big_banner1.jpg"></img></a>
+		<%= link_to image_tag("big_banner1.jpg"), "#" %>
 	</div>
 	<div class="right_banner margint35 right">
-		<a href="#"><img src="images/site/right_banner1.jpg"></img></a>
+		<%= link_to image_tag("right_banner1.jpg"), "#" %>
 		<a class="more" href="/gard/all"><h4>More special offers</h4></a>
+		<%#= link_to "More special offers", gard_all_path, :class => "more" %>
 	</div>
 	<div class="cls"></div>
 	<div class="popular_brands  margint20 left">
 		<div class="popular_brands_line marginb20">
-			<img src="images/site/brand_2.jpg"></img>
-			<img src="images/site/brand_4.jpg"></img>
-			<img src="images/site/brand_3.jpg"></img>
-			<img src="images/site/brand_4.jpg"></img>
-			<img src="images/site/brand_5.jpg"></img>
-			<img src="images/site/brand_1.jpg"></img>
+			<%= link_to image_tag("brand_2.jpg"), "#" %>
+			<%= link_to image_tag("brand_4.jpg"), "#" %>
+			<%= link_to image_tag("brand_3.jpg"), "#" %>
+			<%= link_to image_tag("brand_4.jpg"), "#" %>
+			<%= link_to image_tag("brand_5.jpg"), "#" %>
+			<%= link_to image_tag("brand_1.jpg"), "#" %>
 		</div>
 		<div class="popular_brands_line marginb20">
-			<img src="images/site/brand_4.jpg"></img>
-			<img src="images/site/brand_5.jpg"></img>
-			<img src="images/site/brand_2.jpg"></img>
-			<img src="images/site/brand_4.jpg"></img>
-			<img src="images/site/brand_3.jpg"></img>
-			<img src="images/site/brand_1.jpg"></img>
+			<%= link_to image_tag("brand_5.jpg"), "#" %>
+			<%= link_to image_tag("brand_1.jpg"), "#" %>
+			<%= link_to image_tag("brand_3.jpg"), "#" %>
+			<%= link_to image_tag("brand_2.jpg"), "#" %>
+			<%= link_to image_tag("brand_4.jpg"), "#" %>
+			<%= link_to image_tag("brand_3.jpg"), "#" %>
 		</div>
 		<div class="popular_brands_line marginb20">
-			<img src="images/site/brand_3.jpg"></img>
-			<img src="images/site/brand_2.jpg"></img>
-			<img src="images/site/brand_4.jpg"></img>
-			<img src="images/site/brand_5.jpg"></img>
-			<img src="images/site/brand_4.jpg"></img>
-			<img src="images/site/brand_1.jpg"></img>
+			<%= link_to image_tag("brand_2.jpg"), "#" %>
+			<%= link_to image_tag("brand_4.jpg"), "#" %>
+			<%= link_to image_tag("brand_3.jpg"), "#" %>
+			<%= link_to image_tag("brand_4.jpg"), "#" %>
+			<%= link_to image_tag("brand_5.jpg"), "#" %>
+			<%= link_to image_tag("brand_1.jpg"), "#" %>
 		</div>
 		<div class="popular_brands_line marginb20">
-			<img src="images/site/brand_4.jpg"></img>
-			<img src="images/site/brand_5.jpg"></img>
-			<img src="images/site/brand_2.jpg"></img>
-			<img src="images/site/brand_4.jpg"></img>
-			<img src="images/site/brand_3.jpg"></img>
-			<img src="images/site/brand_1.jpg"></img>
+			<%= link_to image_tag("brand_5.jpg"), "#" %>
+			<%= link_to image_tag("brand_1.jpg"), "#" %>
+			<%= link_to image_tag("brand_3.jpg"), "#" %>
+			<%= link_to image_tag("brand_2.jpg"), "#" %>
+			<%= link_to image_tag("brand_4.jpg"), "#" %>
+			<%= link_to image_tag("brand_3.jpg"), "#" %>
 		</div>
 	</div>
 	<div class="right_banner social margint20 right">
