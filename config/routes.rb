@@ -6,6 +6,7 @@ Garderob4ik::Application.routes.draw do
   get "gard/all"
 
   resources :gard, only: [ :all, :show ]
+  resources :brands, only: [ :show ]
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

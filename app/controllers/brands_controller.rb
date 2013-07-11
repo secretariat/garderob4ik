@@ -1,5 +1,5 @@
 class BrandsController < ApplicationController
 	def show
-		@items = 
+		@items = Brand.find( params[:id] ).items
 	end
 end

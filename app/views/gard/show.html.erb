@@ -32,13 +32,13 @@
 		</a>
 		<form id="addItem" class="">
 			<input type="hidden" name="addToCart">
-			<input type="hidden" value="7913331" name="productId">			
+			<input type="hidden" value="7913331" name="productId">
 			<ul class="saleInfo">
 				<li class="percentOff">
 					<span>Скидка <%= @item.discount %>%</span>
 				</li>
 				<li>
-					<span class="oldPrice">Без скидки: <%= @item.msrp_ua.to_i %> грн.</span> 
+					<span class="oldPrice">Без скидки: <%= @item.msrp_ua.to_i %> грн.</span>
 					<div class="newPrice"><%= @item.price_ua.to_i %> грн.</div>
 				</li>
 				<li class="colors">
