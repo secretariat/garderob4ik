@@ -1,11 +1,4 @@
 <div class="page">
-	<div class="brand_line">
-		Бренды: <% ("A".."Z").each do |brand|  %>
-			<%= link_to "#{brand}", "#" %>
-			<%#= link_to brand.brand_name.capitalize, brand_path(brand) %>
-		<% end %>
-	</div>
-	<hr noshade="noshade" size="1"/>
 	<%#=render "shared/header", :product => product%>
 	<div class="main_banner margint5 left">
 		<%= link_to image_tag("big_banner1.jpg"), "#" %>

@@ -38,6 +38,13 @@
 	 		<a class="btn right" href="#" >Актуальные предложения</a>
 	</div>
 	<div class="cls"></div>
+	<div class="brand_line">
+		Бренды: <% ("A".."Z").each do |letter|  %>
+			<%= link_to "#{letter}", brands_list_path( :term => letter )%>
+			<%#= link_to brand.brand_name.capitalize, brand_path(brand) %>
+		<% end %>
+	</div>
+	<hr noshade="noshade" size="1"/>
 
 <%= yield %>
 

@@ -1,0 +1,5 @@
+<div class="page">
+<% @brands.each do |brand| %>
+	<%= link_to brand.brand_name, brand_path(brand) %><br/>
+<% end %>
+</div>
