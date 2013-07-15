@@ -1,12 +1,13 @@
 class Brand< ActiveRecord::Base
 
-	has_many :items
-	attr_accessible :brand_name, :brand_name_shown
+	mount_uploader :logo, BrandLogoUploader
+
+	has_many :items, :dependent => :destroy
+	attr_accessible :name, :name_shown, :title, :logo, :logo_cache, :meta_d, :meta_k, :text
 
 	def self.search(search)
 		if search
-      # find(:all, :conditions => ['brand_name LIKE ?', "b%"] )
-      find(:all, :conditions => ['brand_name LIKE ?', "#{search}%"] )
+      find(:all, :conditions => ['name LIKE ?', "#{search}%"] )
     end
 	end
 
