@@ -1,39 +1,160 @@
-	
 <div class="page">
-	<div class="header"><h1>HEADER</h1>
-	</div>
-	<div class="left_bar">
-		<h4 class="fheader">Фильтры отбора:</h4>
+	<div class="bar left">
+		<div class="filterheader"><h4>Фильтр</h4></div>
+		<h5>Бренд</h5>
+		<div class="multiselect">
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+		</div>
+		<h5>Размер</h5>
+		<div class="multiselect">
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+		</div>
+		<h5>Цена</h5>
+		<div class="multiselect">
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+		</div>
+		<h5>Ширина</h5>
+		<div class="multiselect">
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+		</div>
+		<h5>Категория</h5>
+		<div class="multiselect">
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+		</div>
+		<h5>Стиль</h5>
+		<div class="multiselect">
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+		</div>
+		<h5>Цвет</h5>
+		<div class="multiselect">
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+		</div>
+		<h5>Материал</h5>
+		<div class="multiselect">
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+			<a href="#">Field 1</a>
+		</div>
 	</div>
 	<div class="main">
 		<div class="sort">
 			<h5>Сортировать по:</h5>
-			<h5 class="options">Новизне</h5>
-			<h5 class="options">Популярности</h5>
-			<h5 class="options">Цене&uarr;</h5>
-			<h5 class="options">Цене&darr;</h5>
+			<a href="#" class="active"><h5 class="options active">Названию</h5></a>
+			<a href="#"><h5 class="options">Популярности</h5></a>
+			<a href="#"><h5 class="options">Дате добавления</h5></a>
+			<a href="#"><h5 class="options">Цене&uarr;</h5></a>
+			<a href="#"><h5 class="options">Цене&darr;</h5></a>
+			<a href="#"><h5 class="options">Величине скидки</h5></a>
+			<div class="pagination right">
+				<a href="#"><h5 class="active">1</h5></a>
+				<a href="#"><h5>2</h5></a>
+				<a href="#"><h5>3</h5></a>
+				<h5>...</h5>
+				<a href="#"><h5>400</h5></a>
+			</div>
 		</div>
 		<% @items.each do |item| %>
 			<div class="product">
 				<% next unless item.description %>
-				<%= link_to gard_path( item.description.id ) do %>
-				<%#= link_to "", gard_show_item( item.description.id )  do %>
-					<%= image_tag ( "/images/#{item.image_path}" ) %>
-					<!-- <span class="brandName"><%#= item.category.gender.gender_name %></span> -->
-					<span class="brandName"><%= item.brand.brand_name %></span>
-					<span class="productName"><%= item.productname %></span>
-					<span class="price"><%= item.price_ua.to_i %> грн.</span>
-				<% end %>
+					<%= link_to gard_path( item.description.id ) do %>
+						<%= image_tag ( "/images/#{item.image_path}" ) %>
+						<span class="brandName"><%= item.brand.name_shown %></span>
+						<span class="productName"><%= item.productname %></span>
+						<span class="price">Цена: <%= item.msrp_ua.to_i %> грн. (<%= item.discount %>% OFF)</span>
+						<span class="price red">Новая цена: <%= item.price_ua.to_i %> грн.</span>
+					<% end %>
 			</div>
 		<% end %>
-
-		<div class="apple_pagination">
-			<%= will_paginate @items %>
+	</div>
+	<div class="cls"></div>
+	<div class="sort">
+		<h5>Сортировать по:</h5>
+		<a href="#" class="active"><h5 class="options active">Названию</h5></a>
+		<a href="#"><h5 class="options">Популярности</h5></a>
+		<a href="#"><h5 class="options">Дате добавления</h5></a>
+		<a href="#"><h5 class="options">Цене&uarr;</h5></a>
+		<a href="#"><h5 class="options">Цене&darr;</h5></a>
+		<a href="#"><h5 class="options">Величине скидки</h5></a>
+		<div class="pagination right">
+			<a href="#"><h5 class="active">1</h5></a>
+			<a href="#"><h5>2</h5></a>
+			<a href="#"><h5>3</h5></a>
+			<h5>...</h5>
+			<a href="#"><h5>400</h5></a>
 		</div>
 	</div>
-<!-- 	<div class="right_bar">
-	</div> -->
-<!-- 	<div class="footer">
-	</div> -->
+	<div class="cls"></div>
+	<hr noshade="noshade" size="1"/>
 </div>
+
 

@@ -7,8 +7,55 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div class="page">
+	<div class="header">
+		<div class="header_logo"><%= link_to image_tag("logo_v2.png"), page_index_path %></div>
+		<div class="header_center"></div>
+		<div class="header_right right">
+			<ul class="upper_menu">
+				<li><%= link_to image_tag("key(2).png", :style => "width: 55px;"), "#" %></li>
+				<li><%= link_to image_tag("user_f.png", :style => "width: 55px;"), "#" %></li>
+				<li><%= link_to image_tag("shopping_basket.png", :style => "width: 55px;"), "#" %></li>
+				<li><%= link_to image_tag("question_4.png", :style => "width: 55px;"), "#" %></li>
+			<ul>
+			<div class="contacts"></div>
+		</div>
+		<ul class="main_menu">
+			<li><%= link_to "О нас", "/about_us"%></a>
+			<li><a href="#">Способы оплаты</a>
+			<li><a href="#">Доставка</a>
+			<li><a href="#">Контакты</a>
+			<li><a href="#">Частые вопросы</a>
+		</ul>
+		<div class="currency"></div>
+	</div>
+	<div class="search_line">
+		<form style="width:699px;height:28px;display:block;float:left;">
+	    	<input id="products_search" placeholder="Поиск товара"></input>
+	      <button type="submit" class="searchbtn right"></button>
+		</form>
+	 		<a class="btn yellow right" href="#" >Подписаться</a>
+	 		<a class="btn right" href="#" >Актуальные предложения</a>
+	</div>
+	<div class="cls"></div>
+	<div class="brand_line">
+		Бренды: <% ("A".."Z").each do |letter|  %>
+			<%= link_to "#{letter}", brands_list_path( :term => letter )%>
+			<%#= link_to brand.brand_name.capitalize, brand_path(brand) %>
+		<% end %>
+	</div>
+	<hr noshade="noshade" size="1"/>
 
 <%= yield %>
 
+	<ul class="main_menu bottom">
+		<li><a href="#">О нас</a>
+		<li><a href="#">Способы оплаты</a>
+		<li><a href="#">Доставка</a>
+		<li><a href="#">Контакты</a>
+		<li><a href="#">Частые вопросы</a>
+	</ul>
+	<a class="btn right" href="#">Оставить отзыв</a>
+</div>
 </body>
 </html>

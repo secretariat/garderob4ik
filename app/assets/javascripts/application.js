@@ -13,3 +13,24 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+$(document).ready(function(){
+	$(".product-image-gallery .photo").click(function(e){
+	  e.preventDefault();
+	  var link = $(this).attr("href");
+	  $(".product-image-preview img").attr("src", link);
+	  $(".product-image-preview a").attr("for", $(this).attr("id"));
+	});
+
+	$(".product-image-preview a").click(function(e){
+	  e.preventDefault();
+	  if($("#photos_container").length != 0){
+	    var el = $(this).attr("for");
+	    $('#photos_container a').lightBox({overlayOpacity: 0.3});
+	    $('#photos_container a#'+el).click();
+	  }else{
+	    $(".product-image-preview a").lightBox({overlayOpacity: 0.3});
+	    $(".product-image-preview a").click();
+	  }
+	});
+});

@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <title> Administration Area</title>
+  <%= stylesheet_link_tag    "admin" %>
+  <%= javascript_include_tag "admin" %>
+  <%= csrf_meta_tags %>
+  <%=yield :head%>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="navigation">
+      <div class="inner">
+        <div class="clearfix">
+          <div class="col1of5">
+            <h1><%= link_to "garderob4ik.com.ua",admin_root_path %> </h1>
+          </div>
+          <div class="col3of5">
+            <ul class="unstyled nav">
+              <li><%= link_to "Страницы", admin_pages_path %></li>
+              <li><%= link_to "Новости", "#"%></li>
+              <li><%= link_to "Акции", "#"%></li>
+              <li><%= link_to "Каталог", "#"%></li>
+              <li><%= link_to "Товары", "#"%></li>
+              <li><%= link_to "Бренды", admin_brands_path %></li>
+              <li><%= link_to "Заказы", "#" %></li>
+              <li><%= link_to "Выход", "#"%></li>
+            </ul>
+          </div>
+          <div class="col1of5">
+            <% flash.each do |key, value| %>
+              <div class="flash_message <%= key%>"><%=value%></div>
+            <%end%>
+            <div class="account-block">
+              <a href="#">USER_EMAIL</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="body">
+      <div class="inner">
+        <%=yield%>
+      </div>
+    </div>
+    <div class="content-pusher"></div>
+  </div>
+  <div class="footer">
+    <div class="inner">
+      <div class="ptm">Admin Dashboard &copy; <%= Time.now.year%></div>
+    </div>
+  </div>
+</body>
+</html>

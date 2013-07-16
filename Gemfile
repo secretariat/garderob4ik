@@ -7,6 +7,10 @@ gem 'therubyracer'
 gem 'thin'
 gem 'hirb'
 gem 'will_paginate', '~> 3.0'
+gem 'tinymce-rails'
+gem 'remotipart', '~> 0.4'
+gem 'rmagick'
+gem 'carrierwave'
 #################################
 
 # Bundle edge Rails instead:

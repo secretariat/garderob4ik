@@ -6,13 +6,14 @@ class Item < ActiveRecord::Base
   has_and_belongs_to_many :sizes
 
 
-	self.per_page = 40
+	self.per_page = 25
 
   attr_accessible :image_path,
       						:brandname,
       						:productname,
       						:price_usd,
       						:price_ua,
-      						:discount
+      						:discount,
+                  :msrp_ua
 
 end

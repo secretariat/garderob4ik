@@ -1,7 +1,14 @@
 class Brand< ActiveRecord::Base
 
-	has_many :items
+	mount_uploader :logo, BrandLogoUploader
 
-	attr_accessible :brand_name
+	has_many :items, :dependent => :destroy
+	attr_accessible :name, :name_shown, :title, :logo, :logo_cache, :meta_d, :meta_k, :text
+
+	def self.search(search)
+		if search
+      find(:all, :conditions => ['name LIKE ?', "#{search}%"] )
+    end
+	end
 
 end
