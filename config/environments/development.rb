@@ -36,5 +36,5 @@ Garderob4ik::Application.configure do
   config.assets.debug = true
 
   #########################################
-  config.assets.prefix = "/dev-assets"
+  # config.assets.prefix = "/dev-assets"
 end
