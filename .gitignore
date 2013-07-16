@@ -16,6 +16,6 @@
 /tmp
 /public/images/*.jpg
 /public/images/descriptions/*.jpg
-/public/upload/images/
+/public/uploads/images/
 
 
