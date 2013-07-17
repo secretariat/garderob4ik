@@ -8,11 +8,11 @@
 		<div class="displayImages">
 			<div class="modelImages left">
 				<% @item.description.images.each  do |photo|%>
-            <%=link_to image_tag("/images/descriptions/#{photo.thumb_path}"), "/images/descriptions/#{photo.image_path}", :class=>"photo", :id => "photo#{photo.id}", :rel=>"lightbox", :title=>"#{link_to("Увеличить изображение", photo.image_path, :target=>"_blank")}" %>
-        <%end%>
+            		<%=link_to image_tag("/images/descriptions/#{photo.thumb_path}"), "javascript:void(0);", :class=>"photo", :rel=>"{gallery: 'gal1', smallimage: './images/descriptions/#{photo.thumb_path}',largeimage: './images/descriptions/#{photo.image_path}'"%>
+            	<%end%>
 			</div>
 			<div class="mainImage left">
-				<%= link_to image_tag( "/images/descriptions/#{@item.description.images[0].image_path}" ), "/images/descriptions/#{@item.description.images[0].image_path}", :for=>'photo1', :title=>"#{link_to("Увеличить изображение", "/images/descriptions/#{@item.description.images[0].image_path}", :target=>"_blank")}" %>
+				<%= link_to image_tag( "/images/descriptions/#{@item.description.images[0].image_path}" ), "/images/descriptions/big_big.jpg", :class=>"jqzoom", :for=>"photo1" %>
 			</div>
 			<div class="colorImages right">
 				<br>
@@ -66,3 +66,15 @@
 	<hr noshade="noshade" size="1"/>
 	<%=render "shared/footer"%>
 </div>
+<script type="text/javascript">
+
+$(document).ready(function() {
+	$('.jqzoom').jqzoom({
+            zoomType: 'innerzoom',
+            preloadImages: false,
+            alwaysOn:false
+        });
+});
+
+
+</script>
