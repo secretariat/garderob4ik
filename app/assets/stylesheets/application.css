@@ -144,7 +144,7 @@
 }
 .displayImages .colorImages {
     width:70px;
-    background-color:grey;
+   
 }
 .displayImages .colorImages img {
     margin-bottom:5px;
@@ -155,6 +155,7 @@
 .displayImages .mainImage img {
     display:block;
     margin:0px auto;
+
 }
 .saleInfo {
     list-style:none outside none;
@@ -623,6 +624,7 @@
 .zoomPad{
     position:relative;
     float:left;
+    width:600px;
     z-index:99;
     cursor:crosshair;
 }
@@ -662,9 +664,10 @@
     filter: alpha(opacity = 60);
     z-index:120;
     position:absolute;
+    right: 200px;
     border:1px solid #CCC;
-  z-index:101;
-  cursor:crosshair;
+    z-index:101;
+    cursor:crosshair;
 }
 
 .zoomOverlay{
@@ -682,8 +685,7 @@
 
 .zoomWindow{
     position:absolute;
-    left:110%;
-    top:40px;
+
     background:#FFF;
     z-index:6000;
     height:auto;
@@ -693,7 +695,7 @@
 .zoomWrapper{
     position:relative;
     border:1px solid #999;
-  z-index:110;
+     z-index:110;
 }
 .zoomWrapperTitle{
   display:block;
