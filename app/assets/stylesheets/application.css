@@ -774,3 +774,26 @@ html, body {
 }
 
 .product-image-gallery .photo img{width:100%}
+.brandlist{width:100%;margin:20px auto 20px auto; border: 1px solid #CCCCCC;}
+.brandlist .brandheader {
+    font-size: 16px;
+    height:20px;
+    background:none repeat scroll 0% 0% rgb(204, 204, 204);
+    padding: 3px;
+    max-height: 50px;
+}
+.brandlist .content {
+    padding: 10px 10px 16px 10px;
+    color: #e1dddd;
+    line-height: 20px;
+    font-size: 14px;
+}
+.brandlist .content span {padding-right: 5px;}
+.brandlist .content span a{
+    color: #515151;
+    text-decoration: none;
+}
+.brandlist .content span a:hover{
+    color: #000;
+    text-decoration: underline;
+}
