@@ -11,7 +11,7 @@ html, body {
     margin-left:auto;
     margin-right:auto;
     width:1050px;
-    margin: 0 auto -40px;
+    margin: 0 auto -50px;
 }
 .header {
     height:100px;
@@ -122,10 +122,12 @@ html, body {
     margin:18px auto 0px;
     padding-bottom:10px;
     text-align:center;
+    width:100%;
+    height:20px;
+    display: block;
 }
 .pName {
     font-size:22px;
-    margin:0px 20px 0px 320px;
     font-weight:600;
 }
 .pModel {
@@ -145,25 +147,32 @@ html, body {
     width:100%;
 }
 .displayImages .modelImages {
-    width:70px;
+    width:55px;
 }
 .displayImages .modelImages img {
     margin-bottom:5px;
 }
 .displayImages .colorImages {
-    width:70px;
+    width:55px;
    
 }
 .displayImages .colorImages img {
     margin-bottom:5px;
 }
-.displayImages .mainImage {
-    width:480px;
-    margin-left:auto;
-    margin-right:auto;
 
+.displayImages .product-image-preview {
+    width:480px;
+    margin-left:130px;
+/*    margin-right:auto;*/
 }
-.displayImages .mainImage img {
+
+.displayImages .product-image-preview .inner{
+  display:table-cell;
+  vertical-align:middle;
+  text-align:center;
+}
+
+.displayImages .mainImage .product-image-preview img {
     display:block;
     margin:0px auto;
 
@@ -745,8 +754,21 @@ html, body {
   display:block;
 }
 .footer, .push {
-    height: 20px; /* .push must be the same height as .footer */
+    margin-top: 10px;
+    height: 50px; /* .push must be the same height as .footer */
     width:1050px;
     margin-left:auto;
     margin-right:auto;
 }
+
+
+
+.product-image-gallery .photo{
+  display:-moz-inline-stack;
+  display:inline-block;
+  zoom:1;
+  _overflow:hidden;
+  *display:inline;
+}
+
+.product-image-gallery .photo img{width:100%}
