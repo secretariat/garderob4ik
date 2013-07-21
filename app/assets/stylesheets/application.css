@@ -158,7 +158,10 @@ html, body {
     margin-bottom:5px;
 }
 .displayImages .mainImage {
-    width:670px;
+    width:480px;
+    margin-left:auto;
+    margin-right:auto;
+
 }
 .displayImages .mainImage img {
     display:block;
@@ -628,7 +631,7 @@ html, body {
 .zoomPad{
     position:relative;
     float:left;
-    width:600px;
+    width:480px;
     z-index:99;
     cursor:crosshair;
 }

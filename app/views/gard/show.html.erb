@@ -11,7 +11,7 @@
             		<%=link_to image_tag("/images/descriptions/#{photo.thumb_path}"), "javascript:void(0);", :class=>"photo", :rel=>"{gallery: 'gal1', smallimage: './images/descriptions/#{photo.thumb_path}',largeimage: './images/descriptions/#{photo.image_path}'"%>
             	<%end%>
 			</div>
-			<div class="mainImage left">
+			<div class="mainImage">
 				<%= link_to image_tag( "/images/descriptions/#{@item.description.images[0].image_path}" ), "/images/descriptions/big_big.jpg", :class=>"jqzoom", :for=>"photo1" %>
 			</div>
 			<div class="colorImages right">
