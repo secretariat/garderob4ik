@@ -8,38 +8,11 @@
 </head>
 <body>
 <div class="page">
-	<div class="header">
-		<div class="header_logo"><%= link_to image_tag("logo_v2.png"), page_index_path %></div>
-		<div class="header_center"></div>
-		<div class="header_right right">
-			<ul class="upper_menu"><%=render "shared/upmenu"%></ul>
-			<div class="contacts"></div>
-		</div>
-		<ul class="main_menu"><%=render "shared/menu"%></ul>
-		<div class="currency"></div>
-	</div>
-	<div class="search_line">
-		<form style="width:699px;height:28px;display:block;float:left;">
-	    	<input id="products_search" placeholder="Поиск товара"></input>
-	      <button type="submit" class="searchbtn right"></button>
-		</form>
-	 		<a class="btn yellow right" href="#" >Подписаться</a>
-	 		<a class="btn right" href="#" >Актуальные предложения</a>
-	</div>
-	<div class="cls"></div>
-	<div class="brand_line">
-		Бренды: <% ("A".."Z").each do |letter|  %>
-			<%= link_to "#{letter}", brands_list_path( :term => letter )%>
-			<%#= link_to brand.brand_name.capitalize, brand_path(brand) %>
-		<% end %>
-	</div>
-	<hr noshade="noshade" size="1"/>
-
+	<%=render "shared/header"%>
 	<%= yield %>
-
-	<ul class="main_menu bottom"><%=render "shared/menu"%></ul>
-	 
-	<a class="btn right" href="#">Оставить отзыв</a>
+	<div class="push"></div>
 </div>
+<div class="cls"></div>
+<%=render "shared/footer"%>
 </body>
 </html>

@@ -45,7 +45,7 @@
 					<%= select_tag( :code, options_from_collection_for_select( @item.sizes, "id", "size_value") )  %>
 				</li>
 				<li id="transBtns">
-				<button name="addToCart" type="submit" class="addToCart">
+				<button name="addToCart" type="submit" class="btn yellow">
 					Добавить в корзину
 				</button>
 				</li>
@@ -59,8 +59,8 @@
 			<%= @item.description.description.html_safe %>
 		</div>
 	</div>
-	<hr noshade="noshade" size="1"/>
-	<%=render "shared/footer"%>
+	
+	
 </div>
 <script type="text/javascript">
 
