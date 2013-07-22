@@ -1,111 +1,4 @@
-<div class="page">
-	<div class="bar left">
-		<div class="filterheader"><h4>Фильтр</h4></div>
-		<h5>Бренд</h5>
-		<div class="multiselect">
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-		</div>
-		<h5>Размер</h5>
-		<div class="multiselect">
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-		</div>
-		<h5>Цена</h5>
-		<div class="multiselect">
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-		</div>
-		<h5>Ширина</h5>
-		<div class="multiselect">
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-		</div>
-		<h5>Категория</h5>
-		<div class="multiselect">
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-		</div>
-		<h5>Стиль</h5>
-		<div class="multiselect">
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-		</div>
-		<h5>Цвет</h5>
-		<div class="multiselect">
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-		</div>
-		<h5>Материал</h5>
-		<div class="multiselect">
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-			<a href="#">Field 1</a>
-		</div>
-	</div>
+	<%=render "shared/lmenu"%>
 	<div class="main">
 		<div class="sort">
 			<h5>Сортировать по:</h5>
@@ -125,7 +18,7 @@
 		</div>
 		<%= render "shared/item_list", :items => @items %>
 	</div>
-	<div class="sort">
+	<div class="sort bottom">
 		<h5>Сортировать по:</h5>
 		<a href="#" class="active"><h5 class="options active">Названию</h5></a>
 		<a href="#"><h5 class="options">Популярности</h5></a>
@@ -141,9 +34,7 @@
 			<a href="#"><h5>400</h5></a>
 		</div>
 	</div>
-	<div class="cls"></div>
-	<hr noshade="noshade" size="1"/>
-	<%=render "shared/footer"%>
-</div>
+
+
 
 
