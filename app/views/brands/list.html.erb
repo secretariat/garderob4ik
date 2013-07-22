@@ -1,5 +1,5 @@
 <div class="page">
-<% @brands.each do |brand| %>
-	<%= link_to brand.name, brand_path(brand) %> (<%= brand.items.count %>)<br/>
-<% end %>
+	<% @brands.each do |brand| %>
+		<%= link_to brand.name, brand_path(brand) %> (<%= brand.items.count %>)<br/>
+	<% end %>
 </div>
