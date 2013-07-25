@@ -1,6 +1,7 @@
 class Item < ActiveRecord::Base
 	belongs_to :category
-	belongs_to :brand
+  belongs_to :brand
+	belongs_to :width
 	has_one :description
   has_and_belongs_to_many :colors
   has_and_belongs_to_many :sizes
