@@ -451,7 +451,6 @@ html, body {
 }
 .product span {
     display:block;
-    font-size:1.1em;
     margin:1px 0px;
     text-decoration:underline;
     width:100%;
@@ -465,6 +464,9 @@ html, body {
     font-size:14px;
     font-weight:bold;
 }
+.product .productName {
+    font-size:12px;
+}
 .product span.price {
     color:#333333;
     font-size:13px;
@@ -473,6 +475,9 @@ html, body {
 }
 .product span.price.red {
     color:#990000 !important;
+}
+.product span.price.black {
+    color:#000 !important;
 }
 .digg_pagination a,.digg_pagination span,.digg_pagination em {
     display:block;

@@ -5,7 +5,8 @@
 			<%= image_tag ( "/images/#{item.image_path}" ) %>
 			<span class="brandName"><%= item.brand.name_shown %></span>
 			<span class="productName"><%= item.productname %></span>
-			<span class="price">Цена: <%= item.msrp_ua.to_i %> грн. (<%= item.discount %>% OFF)</span>
+			<span class="price">Цена: <%= item.msrp_ua.to_i %> грн.</span>
+			<span class="price black">Скидка: <%= item.discount %>%</span>
 			<span class="price red">Новая цена: <%= item.price_ua.to_i %> грн.</span>
 		<% end %>
 	</div>
