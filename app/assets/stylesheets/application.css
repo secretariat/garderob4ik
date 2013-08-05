@@ -81,6 +81,10 @@ html, body {
 .upper_menu li {
     float:left;
     list-style:none outside none;
+    padding-right: 10px;
+}
+.upper_menu li img{
+    height: 60px;
 }
 .main_menu {
     position:absolute;
