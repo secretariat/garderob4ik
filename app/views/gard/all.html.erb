@@ -1,4 +1,11 @@
-	<%=render "shared/lmenu"%>
+	<%=
+		render "shared/lmenu",	:styles => @styles,
+														:categories => @categories,
+														:materials => @materials,
+														:width => @width,
+														:sizes => @sizes,
+														:colors => @colors
+	%>
 	<div class="main">
 		<div class="sort">
 			<h5>Сортировать по:</h5>
@@ -18,7 +25,7 @@
 		</div>
 		<%= render "shared/item_list", :items => @items %>
 	</div>
-	
+
 	<div class="cls"></div>
 	<div class="sort bottom">
 		<h5>Сортировать по:</h5>
@@ -29,11 +36,7 @@
 		<a href="#"><h5 class="options">Цене&darr;</h5></a>
 		<a href="#"><h5 class="options">Величине скидки</h5></a>
 		<div class="pagination right">
-			<a href="#"><h5 class="active">1</h5></a>
-			<a href="#"><h5>2</h5></a>
-			<a href="#"><h5>3</h5></a>
-			<h5>...</h5>
-			<a href="#"><h5>400</h5></a>
+			<%= will_paginate @items, :inner_window => 1, :outer_window => 1 %>
 		</div>
 	</div>
 

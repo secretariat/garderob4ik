@@ -1,0 +1,2 @@
+module WidthHelper
+end
