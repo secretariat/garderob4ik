@@ -1,6 +1,6 @@
 class CategoryController < ApplicationController
   def show
-  	@items = Category.find(params[:id]).items
+  	@items = Category.find(params[:id]).items.paginate( :page => params[:page] )
 		@styles = Style.all
 		@categories = Category.all
 		@width = Width.all

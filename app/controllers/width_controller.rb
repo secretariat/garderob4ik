@@ -1,6 +1,6 @@
 class WidthController < ApplicationController
   def show
-  	@items = Width.find(params[:id]).items
+  	@items = Width.find(params[:id]).items.paginate( :page => params[:page] )
 		@styles = Style.all
 		@categories = Category.all
 		@width = Width.all

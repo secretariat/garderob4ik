@@ -424,13 +424,13 @@ html, body {
     margin:0px;
     text-decoration: none;
 }
-.pagination em:current{
+.pagination em.current{
     color:rgb(136, 136, 136);
     font-size:12px;
-    font-weight:200;
+    font-weight:600;
     margin:0px;
     padding:2px 2px;
-    text-decoration: none;
+    text-decoration: underline;
 }
 .pagination a:hover, em:hover {
     text-decoration:underline;
