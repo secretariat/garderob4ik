@@ -397,7 +397,7 @@ html, body {
 .sort.bottom {
     margin: 10px 0px;
     position: relative;
-    right: 9px;
+    /*right: 9px;*/
 }
 .sort h5 {
     color:rgb(64, 64, 64);
@@ -417,20 +417,27 @@ html, body {
 .sort a h5.options.active {
     text-decoration:underline;
 }
-.sort .pagination a h5 {
+.pagination a, em{
     color:rgb(136, 136, 136);
-    display:block;
-    float:left;
     font-size:12px;
     font-weight:200;
     margin:0px;
-    padding:4px 2px;
+    text-decoration: none;
 }
-.sort .pagination a h5:hover {
+.pagination em:current{
+    color:rgb(136, 136, 136);
+    font-size:12px;
+    font-weight:200;
+    margin:0px;
+    padding:2px 2px;
+    text-decoration: none;
+}
+.pagination a:hover, em:hover {
     text-decoration:underline;
     color:rgb(64, 64, 64);
 }
-.sort .pagination a h5.active {
+
+.pagination a.active {
     color:rgb(64, 64, 64);
     text-decoration:none;
 }
@@ -685,3 +692,40 @@ html, body {
     color: #000;
     text-decoration: underline;
 }
+
+#back-top {
+    position: fixed;
+    bottom: 30px;
+    margin-left: 830px;
+    }
+#back-top a {
+    width: 108px;
+    display: block;
+    text-align: center;
+    font: 11px/100% Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #bbb;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    transition: 1s;
+    }
+#back-top a:hover {
+    color: #000;
+    }
+#back-top span {
+    width: 108px;
+    height: 108px;
+    display: block;
+    margin-bottom: 7px;
+    background: #ddd url('up-arrow.png') no-repeat center center;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    transition: 1s;
+    }
+#back-top a:hover span {
+    background-color: #777;
+    }
