@@ -1,6 +1,6 @@
 class SizeController < ApplicationController
   def show
-  	@items = Size.find(params[:id]).items
+  	@items = Size.find(params[:id]).items.paginate( :page => params[:page] )
 		@styles = Style.all
 		@categories = Category.all
 		@width = Width.all
