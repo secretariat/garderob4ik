@@ -1,8 +1,9 @@
 class MaterialController < ApplicationController
   def show
   	@items = Material.find(params[:id]).items.paginate( :page => params[:page] )
-		@styles = Style.all
+		@styles = Istyle.all
 		@categories = Category.all
+		@width = Width.all
 		@materials = Material.all
 	 	@colors = Color.all
   	@sizes = Size.all

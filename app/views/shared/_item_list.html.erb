@@ -1,7 +1,7 @@
 <% @items.each do |item| %>
-	<% next unless item.description %>
+	<%# next unless item.description %>
 	<div class="product">
-		<%= link_to gard_path( item.description.id ), :target=> "_blank" do %>
+		<%= link_to gard_path( item ), :target=> "_blank" do %>
 			<%= image_tag ( "/images/#{item.image_path}" ) %>
 			<span class="brandName"><%= item.brand.name_shown %></span>
 			<span class="productName"><%= item.productname %></span>

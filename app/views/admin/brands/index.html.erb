@@ -24,7 +24,7 @@
           <% @brands.each do |brand|%>
           <tr>
             <td><%= brand.id %>.</td>
-            <td><%= link_to brand.name, admin_brand_items_path(brand)%></td>
+            <td><%= link_to brand.name_shown, admin_brand_items_path(brand)%></td>
             <td><span class="muted">Товаров: <%= brand.items.count%></span></td>
             <td><%= human_date_time(brand.updated_at) || "-"%></td>
             <td>

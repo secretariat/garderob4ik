@@ -45,8 +45,8 @@
 	</div>
 	<h5>Материал</h5>
 	<div class="multiselect">
-		<%# @materials.each do |m| %>
-			<%#= link_to "#{m.name_us}", material_path(m) %>
-		<%# end %>
+		<% @materials.each do |m| %>
+			<%= link_to "#{m.name_us}", material_path(m) %>
+		<% end %>
 	</div>
 </div>

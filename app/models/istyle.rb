@@ -1,4 +1,4 @@
 # -*- encoding : utf-8 -*-
-class Style< ActiveRecord::Base
+class Istyle< ActiveRecord::Base
 	has_many :items
 end

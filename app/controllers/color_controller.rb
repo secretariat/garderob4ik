@@ -1,7 +1,7 @@
 class ColorController < ApplicationController
   def show
   	@items = Color.find(params[:id]).items.paginate( :page => params[:page] )
-		@styles = Style.all
+		@styles = Istyle.all
 		@categories = Category.all
 		@width = Width.all
 	 	@colors = Color.all
