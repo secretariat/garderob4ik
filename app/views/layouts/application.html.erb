@@ -9,10 +9,10 @@
 <body>
 <div class="page">
 	<%=render "shared/header"%>
-	<%= yield %>
-	<div class="push"></div>
+	<div class="main">
+		<%= yield %>
+	</div>
+	<%=render "shared/footer"%>
 </div>
-<div class="cls"></div>
-<%=render "shared/footer"%>
 </body>
 </html>
