@@ -1,0 +1,47 @@
+<div class="clearfix">
+  <div class="container mbl">
+    <div class="box-header mbm"><h1>Цвета</h1></div>
+      <div class="clearfix mam">
+        <%#= link_to "Добавить", new_admin_material_path, :class=>"submit-button right"%>
+      </div>
+      <div class="mhm">
+      <table class="data-table mbm">
+        <thead>
+          <tr>
+            <td class="checkbox"><input type="checkbox"></td>
+            <td>Цвета</td>
+            <td>Товаров</td>
+            <td class="actions">Посл.Редакт.</td>
+            <td class="actions">Действия</td>
+          </tr>
+        </thead>
+        <tfoot>
+          <tr>
+            <td colspan="9">Показано <%=  @colors.count %> цветов</td>
+          </tr>
+        </tfoot>
+        <tbody>
+          <% @colors.each do |color|%>
+          <tr>
+            <td><%= color.id %>.</td>
+            <td><%= color.color_name %></td>
+            <td><span class="muted">Товаров: <%= color.items.count%></span></td>
+            <td><%= human_date_time(color.updated_at) || "-"%></td>
+            <td>
+            <%#= link_to visibility_button(brand.active), visibility_admin_brand_path(brand), :class=>"visibility-button", :method => :post, :id=>"visibility_#{brand.id}", :remote=>true %>
+            <%=link_to 'Edit' , edit_admin_color_path(color.id), :class=>"action-button" %>
+            <%=link_to 'Delete' , admin_color_path(color), :method=>:delete, :confirm=>"Вы уверены, что хотите удалить этот цвет из перечня?", :class=>"action-button"%>
+            </td>
+          </tr>
+          <%end%>
+          <%if @colors.empty?%>
+            <tr>
+              <td colspan="9"><p>Нет производителей</p></td>
+            </tr>
+          <%end%>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+

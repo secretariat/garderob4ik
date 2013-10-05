@@ -6,7 +6,7 @@ class Admin::BrandsController < ShopController
   before_filter :find_brand, :only => [:update, :edit, :destroy, :visibility]
 
   def index
-    @brands = Brand.order(:name)
+    @brands = Brand.order(:name_shown)
   end
 
   def new

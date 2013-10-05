@@ -1,0 +1,18 @@
+<%=form_for [:admin, @material] do |f|%>
+<div class="clearfix mbm">
+  <%= link_to "Отменить", admin_material_index_path, :class=>"submit-button right"%>
+  <%=f.submit "Сохранить", :class=>"submit-button right mrs"%>
+</div>
+<fieldset>
+  <div class="field clearfix">
+    <div class="col3of4">
+      <label for="">Название цвета (английский)</label>
+      <%=f.text_field :name_us, :class=>"text"%>
+    </div>
+    <div class="col3of4">
+      <label for="">Название цвета (русский)</label>
+      <%=f.text_field :name_ru, :class=>"text"%>
+    </div>
+  </div>
+</fieldset>
+<%end%>
