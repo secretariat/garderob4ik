@@ -2,14 +2,14 @@
   <div class="container mbl">
     <div class="box-header mbm"><h1>Производители</h1></div>
       <div class="clearfix mam">
-        <%#= link_to "Добавить", new_admin_brand_path, :class=>"submit-button right"%>
+        <%#= link_to "Добавить", new_admin_material_path, :class=>"submit-button right"%>
       </div>
       <div class="mhm">
       <table class="data-table mbm">
         <thead>
           <tr>
             <td class="checkbox"><input type="checkbox"></td>
-            <td>Производитель</td>
+            <td>Материалы</td>
             <td>Товаров</td>
             <td class="actions">Посл.Редакт.</td>
             <td class="actions">Действия</td>
@@ -17,24 +17,24 @@
         </thead>
         <tfoot>
           <tr>
-            <td colspan="9">Показано <%=  @brands.count %> производителей</td>
+            <td colspan="9">Показано <%=  @materials.count %> производителей</td>
           </tr>
         </tfoot>
         <tbody>
-          <% @brands.each do |brand|%>
+          <% @materials.each do |material|%>
           <tr>
-            <td><%= brand.id %>.</td>
-            <td><%= link_to brand.name_shown, admin_brand_items_path(brand)%></td>
-            <td><span class="muted">Товаров: <%= brand.items.count%></span></td>
-            <td><%= human_date_time(brand.updated_at) || "-"%></td>
+            <td><%= material.id %>.</td>
+            <td><%= material.name_us %></td>
+            <td><span class="muted">Товаров: <%= material.items.count%></span></td>
+            <td><%= human_date_time(material.updated_at) || "-"%></td>
             <td>
             <%#= link_to visibility_button(brand.active), visibility_admin_brand_path(brand), :class=>"visibility-button", :method => :post, :id=>"visibility_#{brand.id}", :remote=>true %>
-            <%=link_to 'Edit' , edit_admin_brand_path(brand), :class=>"action-button" %>
-            <%=link_to 'Delete' , admin_brand_path(brand), :method=>:delete, :confirm=>"Вы уверены, что хотите удалить этого производителя со всеми вложенными товарами?", :class=>"action-button"%>
+            <%=link_to 'Edit' , edit_admin_material_path(material.id), :class=>"action-button" %>
+            <%=link_to 'Delete' , admin_material_path(material), :method=>:delete, :confirm=>"Вы уверены, что хотите удалить этот материал из перечня?", :class=>"action-button"%>
             </td>
           </tr>
           <%end%>
-          <%if @brands.empty?%>
+          <%if @materials.empty?%>
             <tr>
               <td colspan="9"><p>Нет производителей</p></td>
             </tr>

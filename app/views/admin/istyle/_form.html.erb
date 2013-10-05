@@ -1,0 +1,22 @@
+<%=form_for [:admin, @istyle] do |f|%>
+<div class="clearfix mbm">
+  <%= link_to "Отменить", admin_istyle_index_path, :class=>"submit-button right"%>
+  <%=f.submit "Сохранить", :class=>"submit-button right mrs"%>
+</div>
+<fieldset>
+  <div class="field clearfix">
+    <div class="col3of4">
+      <label for="">Название стиля (английский)</label>
+      <%=f.text_field :name_us, :class=>"text"%>
+    </div>
+    <div class="col3of4">
+      <label for="">Название стиля (русский)</label>
+      <%=f.text_field :name_ru, :class=>"text"%>
+    </div>
+    <div class="col3of4">
+      <label for="">Ссылка</label>
+      <%=f.text_field :link, :class=>"text"%>
+    </div>
+  </div>
+</fieldset>
+<%end%>

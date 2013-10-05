@@ -1,0 +1,47 @@
+<div class="clearfix">
+  <div class="container mbl">
+    <div class="box-header mbm"><h1>Стили</h1></div>
+      <div class="clearfix mam">
+        <%#= link_to "Добавить", new_admin_material_path, :class=>"submit-button right"%>
+      </div>
+      <div class="mhm">
+      <table class="data-table mbm">
+        <thead>
+          <tr>
+            <td class="checkbox"><input type="checkbox"></td>
+            <td>Стили</td>
+            <td>Товаров</td>
+            <td class="actions">Посл.Редакт.</td>
+            <td class="actions">Действия</td>
+          </tr>
+        </thead>
+        <tfoot>
+          <tr>
+            <td colspan="9">Показано <%=  @istyles.count %> стилей</td>
+          </tr>
+        </tfoot>
+        <tbody>
+          <% @istyles.each do |style|%>
+          <tr>
+            <td><%= style.id %>.</td>
+            <td><%= style.name_us %></td>
+            <td><span class="muted">Товаров: <%= style.items.count%></span></td>
+            <td><%= human_date_time(style.updated_at) || "-"%></td>
+            <td>
+            <%#= link_to visibility_button(brand.active), visibility_admin_brand_path(brand), :class=>"visibility-button", :method => :post, :id=>"visibility_#{brand.id}", :remote=>true %>
+            <%=link_to 'Edit' , edit_admin_istyle_path(style.id), :class=>"action-button" %>
+            <%=link_to 'Delete' , admin_istyle_path( style ), :method=>:delete, :confirm=>"Вы уверены, что хотите удалить этот цвет из перечня?", :class=>"action-button"%>
+            </td>
+          </tr>
+          <%end%>
+          <%if @istyles.empty?%>
+            <tr>
+              <td colspan="9"><p>Нет производителей</p></td>
+            </tr>
+          <%end%>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
