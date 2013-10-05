@@ -1,14 +1,55 @@
 	<%#=render "shared/header", :product => product%>
-	<div class="main_banner margint5 left">
-		<%= link_to image_tag("big_banner1.jpg"), "#" %>
-	</div>
-	<div class="right_banner margint35 right">
-		<%= link_to image_tag("right_banner1.jpg"), "#" %>
-		<a class="more" href="/gard/all"><h4>More special offers</h4></a>
-		<%#= link_to "More special offers", gard_all_path, :class => "more" %>
+	<div class="gallery_holder">
+		<div class="gallery_box left">
+			<%= link_to image_tag("boots-B_TEST.jpg"), "#" %>
+		</div>
+		<div class="social-list right">
+			<div class="box">
+			    <div class="ico">
+			        <a href="https://twitter.com"><img width="53" height="53" alt="twitter-icon" src="/assets/social-icons/twitter-icon1.png "></a>                    </div>
+			    <div class="text">
+			        <span>Узнайте о новых акциях подписавшись на нашу страничку в Twitter.</span>
+			    </div>
+		    </div>
+			<div class="box">
+			    <div class="ico">
+			        <a href="https://facebook.com"><img width="53" height="53" alt="facebook-icon" src="/assets/social-icons/bg-facebook1.png "></a>                    </div>
+			    <div class="text">
+			        <span>Узнайте о новых акциях вступив в нашу группу facebook.</span>
+			    </div>
+		    </div>
+			<div class="box">
+			    <div class="ico">
+			        <a href="https://vk.com"><img width="50" alt="vk-icon" src="/assets/social-icons/vk-icon1.png "></a>                    </div>
+			    <div class="text">
+			        <span>Узнайте о новых акциях вступив в нашу группу Вконтакте.</span>
+			    </div>
+		    </div>
+			<div class="box">
+			    <div class="ico">
+			        <a href="#"><img width="53" height="53" alt="mail-icon" src="/assets/social-icons/bg-mail1.png "></a>                    </div>
+			    <div class="text">
+			        <span>Узнайте о новых акциях подписавшись на email-рассылку.</span>
+			    </div>
+		    </div>
+		</div>
 	</div>
 	<div class="cls"></div>
-	<div class="popular_brands  margint20 left">
+
+	<%= image_tag("spec.png", height: '50', :class => "imgh") %>
+	<ul class="boxes">
+		<li class="spbox"><%= link_to image_tag("/images/promo/1.jpg", width: '240'), "#" %></li>
+		<li class="spbox"><%= link_to image_tag("/images/promo/2.jpg", width: '240'), "#" %></li>
+		<li class="spbox"><%= link_to image_tag("/images/promo/3.jpg", width: '240'), "#" %></li>
+		<li class="spbox"><%= link_to image_tag("/images/promo/4.jpg", width: '240'), "#" %></li>
+		
+		<li class="spbox"><%= link_to image_tag("/images/promo/5.jpg", width: '240'), "#" %></li>
+		<li class="spbox"><%= link_to image_tag("/images/promo/6.jpg", width: '240'), "#" %></li>
+		<li class="spbox"><%= link_to image_tag("/images/promo/7.jpg", width: '240'), "#" %></li>
+		<li class="spbox"><%= link_to image_tag("/images/promo/8.jpg", width: '240'), "#" %></li>
+	</ul>
+	<%= image_tag("brands.png", height: '50', :class => "imgh") %>
+	<div class="popular_brands left">
 		<div class="popular_brands_line marginb20">
 			<%= link_to image_tag("brand_1.jpg"), "#" %>
 			<%= link_to image_tag("brand_1.jpg"), "#" %>
@@ -33,17 +74,10 @@
 			<%= link_to image_tag("brand_1.jpg"), "#" %>
 			<%= link_to image_tag("brand_1.jpg"), "#" %>
 		</div>
-		<div class="popular_brands_line marginb20">
-			<%= link_to image_tag("brand_1.jpg"), "#" %>
-			<%= link_to image_tag("brand_1.jpg"), "#" %>
-			<%= link_to image_tag("brand_1.jpg"), "#" %>
-			<%= link_to image_tag("brand_1.jpg"), "#" %>
-			<%= link_to image_tag("brand_1.jpg"), "#" %>
-			<%= link_to image_tag("brand_1.jpg"), "#" %>
-		</div>
+
 	</div>
-	<div class="right_banner social margint20 right">
-		<%= image_tag ( "social.jpg" ) %>
+	<div class="right_banner social">
+		<%= image_tag("social.jpg", width: '250') %>
 	</div>
 	
 
