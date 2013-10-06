@@ -1,5 +1,8 @@
 Garderob4ik::Application.routes.draw do
 
+  match '/login' => 'sessions#new', :as=>:login
+  match '/logout' => 'sessions#destroy', :as=>:logout
+
   root :to => 'page#index'
 
   get "page/index"
@@ -16,6 +19,7 @@ Garderob4ik::Application.routes.draw do
   resources :width, only: [ :show ]
   resources :color, only: [ :show ]
   resources :size, only: [ :show ]
+  resources :sessions, :only => [:new, :create, :destroy]
 
   namespace :admin do
     root :to => 'main#index'

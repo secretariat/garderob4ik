@@ -4,6 +4,7 @@ gem 'rails', '3.2.11'
 #################################
 gem 'execjs'
 gem 'therubyracer'
+gem 'authlogic'
 gem 'thin'
 gem 'hirb'
 gem 'will_paginate', '~> 3.0'
