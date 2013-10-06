@@ -2,7 +2,7 @@
 require 'capistrano/ext/multistage'
 require "bundler/capistrano"
 
-set :application, "dtg"
+set :application, "garderob4ik"
 set :scm, :git
 set :scm_verbose, true
 
@@ -31,7 +31,8 @@ ssh_options[:keys] = ["#{ENV['HOME']}/install/ruby/amazon/vps.pem"]
 set :stages, ["staging", "production"]
 set :default_stage, "production"
 
-after "deploy","deploy:bundle"
+after "deploy","deploy:symlink_shared"
+after "deploy:symlink_shared", "deploy:bundle"
 after "deploy:bundle", "deploy:assets"
 after "deploy:assets", "deploy:migrations"
 after "deploy:migrations", "deploy:restart"
