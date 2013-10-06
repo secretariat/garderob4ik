@@ -2,7 +2,7 @@ class Admin::ColorController < ApplicationController
 	layout "admin"
 
   def index
-  	@colors = Color.all
+  	@colors = Color.paginate( :page => params[:page] )
   end
 
   def destroy
@@ -19,7 +19,7 @@ class Admin::ColorController < ApplicationController
   def update
   	@color = Color.find( params[:id] )
     @color.update_attributes(params[:color])
-    if @istyle.save
+    if @color.save
       flash[:success] =  t('crud.successful_update')
       redirect_to admin_color_index_url
     else

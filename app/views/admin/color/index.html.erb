@@ -24,7 +24,7 @@
           <% @colors.each do |color|%>
           <tr>
             <td><%= color.id %>.</td>
-            <td><%= color.color_name %></td>
+            <td><%= color.name_us %></td>
             <td><span class="muted">Товаров: <%= color.items.count%></span></td>
             <td><%= human_date_time(color.updated_at) || "-"%></td>
             <td>
@@ -41,6 +41,9 @@
           <%end%>
         </tbody>
       </table>
+      <div class="mbm">
+        <%= will_paginate @colors %>
+      </div>
     </div>
   </div>
 </div>
