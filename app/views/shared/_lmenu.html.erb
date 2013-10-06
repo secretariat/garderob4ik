@@ -9,7 +9,7 @@
 	<h5>Размер</h5>
 	<div class="multiselect">
 		<% @sizes.each do |s| %>
-			<%= link_to "#{s.size_value}", size_path(s) %>
+			<%= link_to "#{s.name_us}", size_path(s) %>
 		<% end %>
 	</div>
 	<h5>Цена</h5>
@@ -34,13 +34,13 @@
 	<h5>Категория</h5>
 	<div class="multiselect">
 		<% @categories.each do |c| %>
-			<%= link_to "#{c.cat_name_en}", category_path(c) %>
+			<%= link_to "#{c.name_us}", category_path(c) %>
 		<% end %>
 	</div>
 	<h5>Цвет</h5>
 	<div class="multiselect">
 		<% @colors.each do |c| %>
-			<%= link_to "#{c.color_name}", color_path(c) %>
+			<%= link_to "#{c.name_us}", color_path(c) %>
 		<% end %>
 	</div>
 	<h5>Материал</h5>
