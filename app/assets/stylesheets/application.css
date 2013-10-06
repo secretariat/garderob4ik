@@ -27,16 +27,15 @@ body {
 }
 
 .bar {
-    border:1px solid #fff;
-    border-radius:5px;
+    border:1px solid #ccc;
+    border-radius:5px 5px 5px 0px;
     box-shadow:1px 5px 5px rgba(50, 50, 50, 0.75);
     width:210px;
     margin-bottom: 20px;
 }
 .bar .filterheader {
     height:20px;
-    border-top-left-radius:5px;
-    border-top-right-radius:5px;
+    border-radius:5px 5px 0px 0px;
     background:none repeat scroll 0% 0% rgb(204, 204, 204);
     width:100%;
 }
@@ -483,17 +482,23 @@ body {
 .sort {
     background:none repeat scroll 0px 0px rgb(239, 247, 247);
     float:right;
-    width:98%;
+    width: 792px;
+    border-top-right-radius: 5px; 
+    border-bottom-left-radius: 5px; 
+
 }
 .sort.bottom {
-    margin-top: 20px;
     position: relative;
+    border-top-right-radius: 0px; 
+    border-bottom-left-radius: 0px; 
+    border-bottom-right-radius: 5px; 
+    border-top-left-radius: 5px; 
 }
 .sort h5 {
     color:rgb(64, 64, 64);
     display:block;
     float:left;
-    font-size:12px;
+    font-size:9pt;
     margin:0px;
     padding:4px 4px;
 }
@@ -511,15 +516,16 @@ body {
     padding-right: 3px;
 }
 .pagination a, em{
+    font-family: sans-serif;
     color:rgb(136, 136, 136);
-    font-size:12px;
-    font-weight:200;
+    font-size:9pt;
     margin:0px;
     text-decoration: none;
 }
 .pagination em.current{
-    color:rgb(136, 136, 136);
+    color: #000;
     font-weight:600;
+    font-style: normal;
     margin:0px;
     padding:2px 2px;
 }
@@ -552,9 +558,11 @@ body {
     font-size:10px;
     line-height:16px;
     padding:0px 4px;
+
     position:relative;
     text-align:center;
-    width:190px;
+    width:192px;
+    height: 320px;
 }
 .product span {
     display:block;
@@ -572,7 +580,7 @@ body {
     font-weight:bold;
 }
 .product .productName {
-    font-size:12px;
+    font-size: 1.1em;
 }
 .product span.price {
     color:#333333;
@@ -800,10 +808,11 @@ body {
     margin-left: 830px;
     }
 #back-top a {
-    width: 108px;
+    width: 80px;
     display: block;
     text-align: center;
-    font: 11px/100% Arial, Helvetica, sans-serif;
+    font: 10pt Arial, Helvetica, sans-serif;
+    font-weight: 600;
     text-transform: uppercase;
     text-decoration: none;
     color: #bbb;
@@ -812,11 +821,11 @@ body {
     transition: 1s;
     }
 #back-top a:hover {
-    color: #000;
+    color: #777;
     }
 #back-top span {
-    width: 108px;
-    height: 108px;
+    width: 80px;
+    height: 80px;
     display: block;
     margin-bottom: 7px;
     background: #ddd url('up-arrow.png') no-repeat center center;

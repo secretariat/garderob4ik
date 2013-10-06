@@ -18,6 +18,9 @@
 			<%= will_paginate @items, :inner_window => 1, :outer_window => 1, :class => "pagination right", :previous_label => "«", :next_label => "»" %>
 		</div>
 		<%= render "shared/item_list", :items => @items %>
+	</div>
+
+	<div class="cls"></div>
 		<div class="sort bottom">
 			<h5>Сортировать по:</h5>
 			<a href="#" class="active"><h5 class="options active">Названию</h5></a>
@@ -31,9 +34,6 @@
 				<a href="#top"><span></span>Вверх</a>
 			</p>
 		</div>
-	</div>
-
-	<div class="cls"></div>
 	<script type="text/javascript">
 	$(document).ready(function(){
 		$("#back-top").hide();
