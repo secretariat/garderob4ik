@@ -4,6 +4,11 @@ namespace :deploy do
     run "touch #{current_path}/tmp/restart.txt"
   end
 
+  task :symlink_shared do
+    # run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
+    run "ln -nfs #{shared_path}/uploads #{release_path}/public/images"
+  end
+
   task :bundle do
     run "cd #{release_path} && bundle install --gemfile #{release_path}/Gemfile"
   end
