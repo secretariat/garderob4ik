@@ -1,14 +1,12 @@
 Garderob4ik::Application.routes.draw do
 
+  root :to => 'page#index'
   match '/login' => 'sessions#new', :as=>:login
   match '/logout' => 'sessions#destroy', :as=>:logout
-
-  root :to => 'page#index'
 
   get "page/index"
   get "gard/all"
   get "brands/list"
-
   get "/about_us" => "page#show", :uri=>'about_us'
 
   resources :gard, only: [ :all, :show ]
@@ -23,6 +21,7 @@ Garderob4ik::Application.routes.draw do
 
   namespace :admin do
     root :to => 'main#index'
+    resources :users, :only=>[:edit, :update]
     resources :pages
     resources :material
     resources :category

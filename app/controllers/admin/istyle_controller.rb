@@ -1,5 +1,5 @@
 require 'will_paginate/array'
-class Admin::IstyleController < ApplicationController
+class Admin::IstyleController < AdminController
 	layout "admin"
 
   def index

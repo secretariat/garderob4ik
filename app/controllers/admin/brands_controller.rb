@@ -1,5 +1,5 @@
 # -*- encoding : utf-8 -*-
-class Admin::BrandsController < ShopController
+class Admin::BrandsController < AdminController
 
 	layout "admin"
 

@@ -1,4 +1,4 @@
-class Admin::ColorController < ApplicationController
+class Admin::ColorController < AdminController
 	layout "admin"
 
   def index
