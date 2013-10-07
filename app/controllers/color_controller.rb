@@ -6,6 +6,7 @@ class ColorController < ApplicationController
 		@width = Width.all
 	 	@colors = Color.all
   	@sizes = Size.all
+  	@materials = Material.all
 
 		render "/gard/all"
   end
