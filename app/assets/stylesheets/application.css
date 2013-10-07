@@ -8,6 +8,10 @@ html, body {
 body {
     background: url('bg.jpg') 0 0px repeat;
 }
+
+img {
+    border: 0px;
+}
 .page {
     min-height: 100%;
     height: auto !important;
@@ -637,7 +641,7 @@ body {
     margin:0;
     position:relative;
     width:31px;
-    height:28px;
+    height:26px;
 }
 
 .zoomPad{
