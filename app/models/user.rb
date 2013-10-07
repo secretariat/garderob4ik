@@ -5,4 +5,5 @@ class User < ActiveRecord::Base
 		c.validate_email_field = false
 		# c.validate_password_field = false
 	end
+	attr_accessible :firstname, :lastname, :username, :email, :password, :password_confirmation
 end

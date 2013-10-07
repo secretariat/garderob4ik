@@ -24,7 +24,7 @@
           <% @categories.each do |category|%>
           <tr>
             <td><%= category.id %>.</td>
-            <td><%= category.cat_name_en %></td>
+            <td><%= category.name_us %></td>
             <td><span class="muted">Товаров: <%= category.items.count%></span></td>
             <td><%= human_date_time(category.updated_at) || "-"%></td>
             <td>

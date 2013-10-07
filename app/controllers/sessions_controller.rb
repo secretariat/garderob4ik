@@ -1,6 +1,6 @@
 # -*- encoding : utf-8 -*-
 class SessionsController < ApplicationController
-    layout "signin"
+  layout "signin"
 
   def new
     #redirect_to admin_root_url if current_user
