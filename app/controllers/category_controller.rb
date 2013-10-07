@@ -1,4 +1,4 @@
-class Admin::CategoryController < ApplicationController
+class CategoryController < ApplicationController
   def show
   	@items = Category.find(params[:id]).items.paginate( :page => params[:page] )
 		@styles = Istyle.all
