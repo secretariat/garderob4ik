@@ -11,7 +11,7 @@ Garderob4ik::Application.routes.draw do
 
   resources :gard, only: [ :all, :show ]
   resources :brands, only: [ :show, :list ]
-  resources :category, only: [ :show ]
+  # resources :category, only: [ :show ]
   resources :material, only: [ :show ]
   resources :style, only: [ :show ]
   resources :width, only: [ :show ]
@@ -36,6 +36,14 @@ Garderob4ik::Application.routes.draw do
       end
       post :visibility, :on => :member
     end
+
+    # resources :category do
+    #   post :visibility, :on => :member
+      # post :sort, :on => :collection
+      # resources :subcategories do
+      #     post :visibility, :on => :member
+      # end
+    # end
 
   end
 
