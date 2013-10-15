@@ -10,12 +10,12 @@
 </div>
 <ul class="nav">
 	<li>
-		<a href="#">Представленые бренды</a>
+		<a href="#">Бренды</a>
 		<ul>
-			<% ("A".."P").each do |letter|  %>
+			<% @brands.each do |brand|  %>
 			<li class="in">
-				<a>Brand</a>
-			</li>	
+				<%= link_to brand.name, brand_path(brand) %>
+			</li>
 		<% end %>
 		</ul>
 	</li>

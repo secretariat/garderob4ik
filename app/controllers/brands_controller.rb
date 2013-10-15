@@ -1,6 +1,6 @@
 class BrandsController < ApplicationController
 	def show
-		@items = Brand.visible.items.paginate( :page => params[:page] )
+		@items = Brand.find(params[:id]).items.paginate( :page => params[:page] )
 		@styles = Istyle.all
 		@categories = Category.all
 		@width = Width.all

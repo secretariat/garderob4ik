@@ -6,6 +6,7 @@ class Brand< ActiveRecord::Base
 	attr_accessible :name, :name_shown, :title, :logo, :logo_cache, :meta_d, :meta_k, :text, :active
 
 	scope :visible,  where( :active => true )
+	scope :sorted,  order( "name ASC" )
 
 	def self.search(search)
 		if search
