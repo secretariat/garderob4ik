@@ -1,5 +1,5 @@
 <div class="brandlist">
-	<div class="brandheader">Бренды в каталоге:</div>
+	<div class="brandheader">Брендов в каталоге (<%= @brands.count %>):</div>
 	<div class="content">
 		<% @brands.each do |brand| %>
 			<span><%= link_to brand.name, brand_path(brand) %> [<%= brand.items.count %>]</span>
