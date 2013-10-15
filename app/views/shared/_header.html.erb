@@ -12,17 +12,23 @@
 	<li>
 		<a href="#">Бренды</a>
 		<ul>
+			<% cur_letter = nil %>
 			<% @brands.each do |brand|  %>
-			<li class="in">
-				<%= link_to brand.name, brand_path(brand) %>
-			</li>
-		<% end %>
+				<li class="in">
+					<% title_letter = brand.name[0].capitalize.match(/[A-Z]/) ? brand.name[0].capitalize : "#" %>
+				  <% if title_letter != cur_letter %>
+				    <% cur_letter = title_letter %>
+				    <%= cur_letter %>
+				  <% end %>
+					<%= link_to brand.name, brand_path(brand) %>
+				</li>
+			<% end %>
 		</ul>
 	</li>
 </ul>
 	<form class="search_form right">
-    	<input id="products_search" placeholder="Поиск товара"></input>
-      <button type="submit" class="searchbtn right"></button>
+  	<input id="products_search" placeholder="Поиск товара"></input>
+    <button type="submit" class="searchbtn right"></button>
 	</form>
 
 <div class="cls"></div>
