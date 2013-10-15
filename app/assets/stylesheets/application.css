@@ -8,6 +8,10 @@ html, body {
 body {
     background: url('bg.jpg') 0 0px repeat;
 }
+
+img {
+    border: 0px;
+}
 .page {
     min-height: 100%;
     height: auto !important;
@@ -261,15 +265,57 @@ body {
     font-weight: bold;
     height:28px;
     overflow: hidden;
+    list-style: none outside none;
 }
-.brand_line a {
-    font-size:12px;
-    font-weight:600;
-    color: #404040;
-    margin:0px 5px;
-}
-.brand_line a:hover {
+
+.nav {
+    float: left;
+    margin: 10px 0px;
+    font-family: sans-serif;
+    font-size: 12pt;
+    font-weight: bold;
+    height:28px;
+    overflow: hidden;
+    list-style: none outside none;
     color: #000;
+    padding: 0px;
+    margin-top: 10px;
+}
+.nav li a {
+    color: #000;
+    display: block;
+    text-decoration: none;
+}
+.in a {
+    color: #fff !important;
+    font-weight: 200;
+    padding: 5px 10px;
+}
+.in a:hover {
+    text-decoration: underline;
+}
+.nav ul {
+    background-color: #262626;
+    position: relative;
+    display: none;
+    list-style: none outside none;
+    padding-left: 0;
+    position: absolute;
+    width: 600px;
+    z-index: 2;
+    border-radius: 3px;
+
+}
+
+.nav ul li {
+    float: left;
+    width: 100px;
+}
+
+.nav li:hover ul {
+    display: block;
+    opacity: 0.9;
+    text-decoration: none;
 }
 .gallery_holder {
     width:100%;
@@ -637,7 +683,7 @@ body {
     margin:0;
     position:relative;
     width:31px;
-    height:28px;
+    height:26px;
 }
 
 .zoomPad{

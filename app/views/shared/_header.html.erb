@@ -8,12 +8,18 @@
 	<ul class="main_menu"><%=render "shared/menu"%></ul>
 	<div class="currency"></div>
 </div>
-<div class="brand_line">
-	Бренды: <% ("A".."P").each do |letter|  %>
-		<%= link_to "#{letter}", brands_list_path( :term => letter )%>
-		<%#= link_to brand.brand_name.capitalize, brand_path(brand) %>
-	<% end %>
-</div>
+<ul class="nav">
+	<li>
+		<a href="#">Представленые бренды</a>
+		<ul>
+			<% ("A".."P").each do |letter|  %>
+			<li class="in">
+				<a>Brand</a>
+			</li>	
+		<% end %>
+		</ul>
+	</li>
+</ul>
 	<form class="search_form right">
     	<input id="products_search" placeholder="Поиск товара"></input>
       <button type="submit" class="searchbtn right"></button>
