@@ -27,7 +27,7 @@
 	</div>
 	<div class="bar prod right">
 		<a class="bLogo" href="#">
-			<img src="#" alt="Brand"></img>
+			<%#= image_tag(@item.brand.logo_url) %><br />
 		</a>
 		<form id="addItem" class="">
 			<input type="hidden" name="addToCart">
@@ -42,11 +42,11 @@
 				</li>
 				<li class="colors">
 					<label>Цвет:</label>
-					<%= select_tag( :code, options_from_collection_for_select( @item.colors, "id", "color_name") )  %>
+					<%= select_tag( :code, options_from_collection_for_select( @item.colors, "id", "name_us") )  %>
 				</li>
 				<li class="colors">
 					<label>Размер:</label>
-					<%= select_tag( :code, options_from_collection_for_select( @item.sizes, "id", "size_value") )  %>
+					<%= select_tag( :code, options_from_collection_for_select( @item.sizes, "id", "name_us") )  %>
 				</li>
 				<li id="transBtns">
 				<button name="addToCart" type="submit" class="btn yellow">
@@ -59,9 +59,7 @@
 	<div class="cls"></div>
 	<div class="prodInfo">
 		<h3>Описание товара:</h3>
-		<div class="description">
 			<%= @item.description.description.html_safe %>
-		</div>
 	</div>
 
 <script type="text/javascript">

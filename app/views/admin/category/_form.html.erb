@@ -1,0 +1,22 @@
+<%=form_for [:admin, @category] do |f|%>
+<div class="clearfix mbm">
+  <%= link_to "Отменить", admin_category_index_path, :class=>"submit-button right"%>
+  <%=f.submit "Сохранить", :class=>"submit-button right mrs"%>
+</div>
+<fieldset>
+  <div class="field clearfix">
+    <div class="col3of4">
+      <label for="">Название категории (английский)</label>
+      <%=f.text_field :name_us, :class=>"text"%>
+    </div>
+    <div class="col3of4">
+      <label for="">Название категории (русский)</label>
+      <%=f.text_field :name_ru, :class=>"text"%>
+    </div>
+    <div class="col3of4">
+      <label for="">Ccылка</label>
+      <%=f.text_field :cat_link, :class=>"text"%>
+    </div>
+  </div>
+</fieldset>
+<%end%>

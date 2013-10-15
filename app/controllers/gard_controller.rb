@@ -1,6 +1,12 @@
 class GardController < ApplicationController
   def all
   	@items = Item.paginate( :page => params[:page] )
+  	@styles = Istyle.all
+  	@categories = Category.all
+  	@width = Width.all
+  	@colors = Color.all
+  	@sizes = Size.all
+    @materials = Material.all
   end
 
   def show

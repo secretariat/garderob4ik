@@ -1,5 +1,12 @@
-	<%=render "shared/lmenu"%>
-	<div class="main">
+	<%=
+		render "shared/lmenu",	:styles => @styles,
+														:categories => @categories,
+														:materials => @materials,
+														:width => @width,
+														:sizes => @sizes,
+														:colors => @colors
+	%>
+	<div class="prodmain">
 		<div class="sort">
 			<h5>Сортировать по:</h5>
 			<a href="#" class="active"><h5 class="options active">Названию</h5></a>
@@ -8,33 +15,46 @@
 			<a href="#"><h5 class="options">Цене&uarr;</h5></a>
 			<a href="#"><h5 class="options">Цене&darr;</h5></a>
 			<a href="#"><h5 class="options">Величине скидки</h5></a>
-			<div class="pagination right">
-				<a href="#"><h5 class="active">1</h5></a>
-				<a href="#"><h5>2</h5></a>
-				<a href="#"><h5>3</h5></a>
-				<h5>...</h5>
-				<a href="#"><h5>400</h5></a>
-			</div>
+			<%= will_paginate @items, :inner_window => 1, :outer_window => 1, :class => "pagination right", :previous_label => "«", :next_label => "»" %>
 		</div>
 		<%= render "shared/item_list", :items => @items %>
 	</div>
+
 	<div class="cls"></div>
-	<div class="sort bottom">
-		<h5>Сортировать по:</h5>
-		<a href="#" class="active"><h5 class="options active">Названию</h5></a>
-		<a href="#"><h5 class="options">Популярности</h5></a>
-		<a href="#"><h5 class="options">Дате добавления</h5></a>
-		<a href="#"><h5 class="options">Цене&uarr;</h5></a>
-		<a href="#"><h5 class="options">Цене&darr;</h5></a>
-		<a href="#"><h5 class="options">Величине скидки</h5></a>
-		<div class="pagination right">
-			<a href="#"><h5 class="active">1</h5></a>
-			<a href="#"><h5>2</h5></a>
-			<a href="#"><h5>3</h5></a>
-			<h5>...</h5>
-			<a href="#"><h5>400</h5></a>
+		<div class="sort bottom">
+			<h5>Сортировать по:</h5>
+			<a href="#" class="active"><h5 class="options active">Названию</h5></a>
+			<a href="#"><h5 class="options">Популярности</h5></a>
+			<a href="#"><h5 class="options">Дате добавления</h5></a>
+			<a href="#"><h5 class="options">Цене&uarr;</h5></a>
+			<a href="#"><h5 class="options">Цене&darr;</h5></a>
+			<a href="#"><h5 class="options">Величине скидки</h5></a>
+			<%= will_paginate @items, :inner_window => 1, :outer_window => 1, :class => "pagination right", :previous_label => "«", :next_label => "»" %>
+			<p id="back-top">
+				<a href="#top"><span></span>Вверх</a>
+			</p>
 		</div>
-	</div>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$("#back-top").hide();
+		$(function () {
+			$(window).scroll(function () {
+				if ($(this).scrollTop() > 50) {
+					$('#back-top').fadeIn();
+				} else {
+					$('#back-top').fadeOut();
+				}
+			});
+			$('#back-top a').click(function () {
+				$('body,html').animate({
+					scrollTop: 0
+				}, 800);
+				return false;
+			});
+		});
+	});
+</script>
+
 
 
 

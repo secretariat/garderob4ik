@@ -6,8 +6,8 @@ class Category < ActiveRecord::Base
 
 	attr_accessible :gender_id,
     							:departments_id,
-      						:cat_name_en,
-      						:cat_name_ru,
+      						:name_us,
+      						:name_ru,
       						:cat_link
 
 end

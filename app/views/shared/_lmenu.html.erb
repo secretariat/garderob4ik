@@ -1,107 +1,48 @@
 <div class="bar left">
 	<div class="filterheader"><h4>Фильтр</h4></div>
-	<h5>Бренд</h5>
+	<h5>Стиль</h5>
 	<div class="multiselect">
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
+		<% @styles.each do |style| %>
+			<%= link_to "#{style.name_us}", style_path(style) %>
+		<% end %>
 	</div>
 	<h5>Размер</h5>
 	<div class="multiselect">
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
+		<% @sizes.each do |s| %>
+			<%= link_to "#{s.name_us}", size_path(s) %>
+		<% end %>
 	</div>
-	<h5>Цена</h5>
+	<h5>Цена (грн.)</h5>
 	<div class="multiselect">
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
+		<a href="#">200-300 </a>
+		<a href="#">300-400 </a>
+		<a href="#">400-500 </a>
+		<a href="#">500-600 </a>
+		<a href="#">700-800 </a>
+		<a href="#">900-1000 </a>
 	</div>
 	<h5>Ширина</h5>
 	<div class="multiselect">
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
+		<% @width.each do |w| %>
+			<%= link_to "#{w.name_us}", width_path(w) %>
+		<% end %>
 	</div>
 	<h5>Категория</h5>
 	<div class="multiselect">
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
-	</div>
-	<h5>Стиль</h5>
-	<div class="multiselect">
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
+		<% @categories.each do |c| %>
+			<%= link_to "#{c.name_us}", category_path(c) %>
+		<% end %>
 	</div>
 	<h5>Цвет</h5>
 	<div class="multiselect">
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
+		<% @colors.each do |c| %>
+			<%= link_to "#{c.name_us}", color_path(c) %>
+		<% end %>
 	</div>
 	<h5>Материал</h5>
 	<div class="multiselect">
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
-		<a href="#">Field 1</a>
+		<% @materials.each do |m| %>
+			<%= link_to "#{m.name_us}", material_path(m) %>
+		<% end %>
 	</div>
 </div>

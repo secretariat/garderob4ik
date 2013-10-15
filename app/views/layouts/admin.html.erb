@@ -14,7 +14,7 @@
       <div class="inner">
         <div class="clearfix">
           <div class="col1of5">
-            <h1><%= link_to "garderob4ik.com.ua",admin_root_path %> </h1>
+            <h1><%= link_to "garderob4ik.com.ua", admin_root_path %> </h1>
           </div>
           <div class="col3of5">
             <ul class="unstyled nav">
@@ -24,8 +24,12 @@
               <li><%= link_to "Каталог", "#"%></li>
               <li><%= link_to "Товары", "#"%></li>
               <li><%= link_to "Бренды", admin_brands_path %></li>
+              <li><%= link_to "Категории", admin_category_index_path %></li>
+              <li><%= link_to "Материалы", admin_material_index_path %></li>
+              <li><%= link_to "Стили", admin_istyle_index_path %></li>
+              <li><%= link_to "Цвета", admin_color_index_path %></li>
               <li><%= link_to "Заказы", "#" %></li>
-              <li><%= link_to "Выход", "#"%></li>
+              <li><%= link_to "Выход", logout_path%></li>
             </ul>
           </div>
           <div class="col1of5">
@@ -33,7 +37,7 @@
               <div class="flash_message <%= key%>"><%=value%></div>
             <%end%>
             <div class="account-block">
-              <a href="#">USER_EMAIL</a>
+              <a href="#"><%= @current_user.email%></a>
             </div>
           </div>
         </div>
