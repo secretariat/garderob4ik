@@ -8,29 +8,36 @@
 	<ul class="main_menu"><%=render "shared/menu"%></ul>
 	<div class="currency"></div>
 </div>
-<ul class="nav">
-	<li>
-		<a href="#">Бренды</a>
-		<ul>
+<li class="brand_line"><%= image_tag("brands-img.png", width: 200) %>
+	<div class="dropdown">
+		<div class="rasp"></div>
+			<% collen = @brands.length / 4 %>
+			<% pos = 0 %>
 			<% cur_letter = nil %>
-			<% @brands.each do |brand|  %>
-				<li class="in">
-					<% title_letter = brand.name[0].capitalize.match(/[A-Z]/) ? brand.name[0].capitalize : "#" %>
-				  <% if title_letter != cur_letter %>
-				    <% cur_letter = title_letter %>
-				    <%= cur_letter %>
-				  <% end %>
-					<%= link_to brand.name, brand_path(brand) %>
-				</li>
+			<% for i in 1..4 %>
+				<ul>
+					<% if i == 4 %>
+						<% enditer = @brands.length %>
+					<% else %>
+						<% enditer = collen*i %>
+					<% end %>
+						<% for index in pos ... enditer %>
+							<% title_letter = @brands[index].name[0].capitalize.match(/[A-Z]/) ? @brands[index].name[0].capitalize : "#" %>
+							<% if title_letter != cur_letter %>
+								<% cur_letter = title_letter %>
+								<li><h4><%= cur_letter %></h4></li>
+							<% end %>
+								<li><%= link_to @brands[index].name, brand_path(@brands[index]) %></li>
+								<% pos += 1 %>
+						<% end %>
+				</ul>
 			<% end %>
-		</ul>
-	</li>
-</ul>
+	</div>
+</li>
 	<form class="search_form right">
   	<input id="products_search" placeholder="Поиск товара"></input>
     <button type="submit" class="searchbtn right"></button>
 	</form>
-
 <div class="cls"></div>
 
 
