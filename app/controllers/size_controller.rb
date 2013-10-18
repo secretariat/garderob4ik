@@ -1,4 +1,4 @@
-class SizeController < ApplicationController
+class SizeController < ShopController
   def show
   	@items = Size.find(params[:id]).items.paginate( :page => params[:page] )
 		@styles = Istyle.all

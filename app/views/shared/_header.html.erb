@@ -11,25 +11,26 @@
 <li class="brand_line"><%= image_tag("brands-img.png", width: 200) %>
 	<div class="dropdown">
 		<div class="rasp"></div>
-			<% collen = @brands.length / 4 %>
+			<% collen = @brands.size / 4 %>
 			<% pos = 0 %>
 			<% cur_letter = nil %>
 			<% for i in 1..4 %>
 				<ul>
 					<% if i == 4 %>
-						<% enditer = @brands.length %>
+						<% enditer = @brands.size %>
 					<% else %>
 						<% enditer = collen*i %>
 					<% end %>
-						<% for index in pos ... enditer %>
-							<% title_letter = @brands[index].name[0].capitalize.match(/[A-Z]/) ? @brands[index].name[0].capitalize : "#" %>
-							<% if title_letter != cur_letter %>
-								<% cur_letter = title_letter %>
-								<li><h4><%= cur_letter %></h4></li>
-							<% end %>
-								<li><%= link_to @brands[index].name, brand_path(@brands[index]) %></li>
-								<% pos += 1 %>
+
+					<% for index in pos ... enditer %>
+						<% title_letter = @brands[index].name[0].capitalize.match(/[A-Z]/) ? @brands[index].name[0].capitalize : "#" %>
+						<% if title_letter != cur_letter %>
+							<% cur_letter = title_letter %>
+							<li><h4><%= cur_letter %></h4></li>
 						<% end %>
+							<li><%= link_to "#{@brands[index].name_shown} (#{@brands[index].items.count})", brand_path(@brands[index]) %></li>
+							<% pos += 1 %>
+					<% end %>
 				</ul>
 			<% end %>
 	</div>

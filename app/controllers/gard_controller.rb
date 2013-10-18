@@ -1,4 +1,4 @@
-class GardController < ApplicationController
+class GardController < ShopController
   def all
   	@items = Item.paginate( :page => params[:page] )
   	@styles = Istyle.all

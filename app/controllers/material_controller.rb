@@ -1,4 +1,4 @@
-class MaterialController < ApplicationController
+class MaterialController < ShopController
   def show
   	@items = Material.find(params[:id]).items.paginate( :page => params[:page] )
 		@styles = Istyle.all

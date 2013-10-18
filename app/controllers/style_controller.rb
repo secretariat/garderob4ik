@@ -1,5 +1,5 @@
 require 'will_paginate/array'
-class StyleController < ApplicationController
+class StyleController < ShopController
 	def show
 		@items = Istyle.find(params[:id]).items.paginate( :page => params[:page] )
 		@styles = Istyle.all

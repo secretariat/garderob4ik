@@ -1,4 +1,4 @@
-class BrandsController < ApplicationController
+class BrandsController < ShopController
 	def show
 		@items = Brand.find(params[:id]).items.paginate( :page => params[:page] )
 		@styles = Istyle.all
@@ -7,6 +7,8 @@ class BrandsController < ApplicationController
 	 	@colors = Color.all
   	@sizes = Size.all
     @materials = Material.all
+
+    render "gard/all"
 	end
 
 	def list
