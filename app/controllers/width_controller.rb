@@ -1,4 +1,4 @@
-class WidthController < ApplicationController
+class WidthController < ShopController
   def show
   	@items = Width.find(params[:id]).items.paginate( :page => params[:page] )
 		@styles = Istyle.all

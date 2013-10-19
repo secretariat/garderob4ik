@@ -1,4 +1,4 @@
-class ColorController < ApplicationController
+class ColorController < ShopController
   def show
   	@items = Color.find(params[:id]).items.paginate( :page => params[:page] )
 		@styles = Istyle.all
