@@ -28,4 +28,15 @@ class Admin::IstyleController < AdminController
       render :edit
     end
   end
+
+  def visibility
+    @istyle = Istyle.find( params[:id] )
+    @istyle.active = vis = @istyle.active==false ? true : false
+    @istyle.save
+    # if @brand.save
+    #   @brand.items.update_all("visibility = #{vis}")
+    # end
+    # redirect_to admin_brands_url unless request.xhr?
+  end
+
 end

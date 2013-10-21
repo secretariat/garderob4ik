@@ -9,7 +9,8 @@
         <thead>
           <tr>
             <td class="checkbox"><input type="checkbox"></td>
-            <td>Стили</td>
+            <td>Стиль (англ.)</td>
+            <td>Стиль (рус.)</td>
             <td>Товаров</td>
             <td class="actions">Посл.Редакт.</td>
             <td class="actions">Действия</td>
@@ -25,10 +26,11 @@
           <tr>
             <td><%= style.id %>.</td>
             <td><%= style.name_us %></td>
+            <td><%= style.name_ru %></td>
             <td><span class="muted">Товаров: <%= style.items.count%></span></td>
             <td><%= human_date_time(style.updated_at) || "-"%></td>
             <td>
-            <%#= link_to visibility_button(brand.active), visibility_admin_brand_path(brand), :class=>"visibility-button", :method => :post, :id=>"visibility_#{brand.id}", :remote=>true %>
+            <%#= link_to visibility_button(style.active), visibility_admin_istyle_path(style), :class=>"visibility-button", :method => :post, :id=>"visibility_#{style.id}", :remote=>true %>
             <%=link_to 'Edit' , edit_admin_istyle_path(style.id), :class=>"action-button" %>
             <%=link_to 'Delete' , admin_istyle_path( style ), :method=>:delete, :confirm=>"Вы уверены, что хотите удалить этот цвет из перечня?", :class=>"action-button"%>
             </td>

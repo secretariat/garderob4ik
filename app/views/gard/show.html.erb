@@ -9,13 +9,18 @@
 			<div class="modelImages left">
 		    <div class="product-image-gallery" id="photos_container">
           <% @item.description.images.each do |photo|%>
-	            <%=link_to image_tag("/images/descriptions/#{photo.thumb_path}"), "/images/descriptions/#{photo.image_path}", :class=>"photo", :id => "photo#{photo.id}", :rel=>"lightbox", :title=>"#{link_to("Увеличить изображение", photo.image_path, :target=>"_blank")}" %>
+	            <%=link_to image_tag("/images/descriptions/#{photo.thumb_path}"), "/images/descriptions/#{photo.image_path}", :class=>"photo", :id => "photo#{photo.id}", :rel=>"lightbox", :title=>"#{link_to("Увеличить изображение", photo.image_path)}" %>
+	            <!-- <div class="product-image-preview left">
+					      <div class="inner">
+						     	<%#= link_to image_tag( "/images/descriptions/#{photo.image_path}" ), "/images/descriptions/#{photo.zoom_path}", :class=>"jqzoom", :for=>"photo#{photo.id}" %>
+					      </div>
+				    	</div> -->
           <%end%>
         </div>
 			</div>
 			<div class="product-image-preview left">
 	      <div class="inner">
-		     	<%= link_to image_tag( "/images/descriptions/#{@item.description.images[0].image_path}" ), "/images/descriptions/big_big.jpg", :class=>"jqzoom", :for=>"photo1" %>
+		     	<%= link_to image_tag( "/images/descriptions/#{@item.description.images[0].image_path}" ), "/images/descriptions/#{@item.description.images[0].zoom_path}", :class=>"jqzoom", :for=>"photo#{@item.id}" %>
 	      </div>
     	</div>
     	<div class="colorImages right">
