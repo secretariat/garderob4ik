@@ -38,21 +38,28 @@ img {
     margin-bottom: 20px;
 }
 .bar .filterheader {
-    height:20px;
+    height:30px;
     border-radius:5px 5px 0px 0px;
-    background:none repeat scroll 0% 0% rgb(204, 204, 204);
+    background-color: #ffff9d;
     width:100%;
+
+
 }
 .bar .filterheader h4 {
     margin:0px;
     text-align:center;
+    font-size:18px;
+    font-family: 'Segoe Script', Verdana;
+    font-weight: 600;
 }
 .bar h5 {
     color:rgb(64, 64, 64);
+
     font-size:14px;
     line-height:18px;
     margin:10px 0px 0px 10px;
     text-align:left;
+    font-family: 'Segoe Script', Verdana;
 }
 .bar .multiselect {
     background:none repeat scroll 0px 0px rgb(255, 255, 255);
@@ -68,7 +75,8 @@ img {
 .bar .multiselect a {
     clear:left;
     display:block;
-    font-size:14px;
+    font-size:12px;
+    font-weight: 200;
     text-decoration:none;
     color:rgb(0, 0, 0);
 }
@@ -288,16 +296,16 @@ img {
 }
 
 .dropdown ul {
-    width: 160px;
+    width: 170px;
     color: #fff;
     float: left;
     list-style:none outside none;
-    padding: 0px 10px;
+    padding: 0px 5px;
 }
 
 .dropdown ul li a
 {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 200;
     color: #fff;
     text-decoration: none;
@@ -310,7 +318,7 @@ img {
 .dropdown ul li h4{
     clear: left;
     color: #F5F5F5;
-    font-size: 15px;
+    font-size: 12px;
     font-weight: bold;
     padding: 4px 2px;
     background-color: #e1004c;
@@ -343,6 +351,21 @@ img {
     overflow: hidden;
     width: 100%;
 }
+.social-list .box:hover {
+    background-color: color:rgb(100, 100, 100);
+
+}
+
+.social-list a {
+    text-decoration: none;
+    color: #c1c1c1;
+}
+
+.social-list a:hover {
+    color: #000;
+}
+
+
 .social-list .ico {
     float: left;
     padding: 20px 0 0 15px;
@@ -598,7 +621,9 @@ img {
 .prodInfo h3 {
     background:none repeat scroll 0px 0px rgb(126, 128, 131);
     color:rgb(255, 255, 255);
-    padding-left:10px;
+    font-family: "Segoe Script", arial;
+    font-weight: 600;
+    padding-left: 25px;
 }
 .product {
     display:block;
