@@ -38,10 +38,13 @@ img {
     margin-bottom: 20px;
 }
 .bar .filterheader {
-    height:30px;
+    height:33px;
     border-radius:5px 5px 0px 0px;
     background-color: #ffff9d;
     width:100%;
+}
+.bar .filterheader img{
+    margin-left: 50px;
 }
 .bar img {
     margin: 3px 100px 0px 10px;
