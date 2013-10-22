@@ -23,3 +23,9 @@ end
 
 gem 'jquery-rails'
 gem 'capistrano'
+gem 'sunspot_rails'
+gem 'progress_bar'
+
+group :development do
+  gem 'sunspot_solr'
+end

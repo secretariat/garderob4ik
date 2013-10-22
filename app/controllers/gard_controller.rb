@@ -1,6 +1,13 @@
 class GardController < ShopController
+
   def all
-  	@items = Item.paginate( :page => params[:page] )
+    @search = Item.search do
+      # fulltext params[:search]
+      with(:created_at).less_than(Time.zone.now)
+      order_by(:created_at, :desc)
+    end
+    @items = @search.results
+  	# @items = Item.paginate( :page => params[:page] )
   	@styles = Istyle.all
   	@categories = Category.all
   	@width = Width.all

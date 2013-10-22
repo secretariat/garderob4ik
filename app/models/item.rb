@@ -1,4 +1,9 @@
 class Item < ActiveRecord::Base
+
+  searchable do
+    time :created_at
+  end
+
 	belongs_to :category
   belongs_to :brand
 	belongs_to :width
