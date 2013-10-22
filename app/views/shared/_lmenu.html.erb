@@ -1,18 +1,18 @@
 <div class="bar left">
 	<div class="filterheader"><h4>Фильтр</h4></div>
-	<h5>Стиль</h5>
+	<%= image_tag ("style.png") %>
 	<div class="multiselect">
 		<% @styles.each do |style| %>
 			<%= link_to "#{style.name_us}", style_path(style) %>
 		<% end %>
 	</div>
-	<h5>Размер</h5>
+	<%= image_tag ("size.png") %>
 	<div class="multiselect">
 		<% @sizes.each do |s| %>
 			<%= link_to "#{s.name_us}", size_path(s) %>
 		<% end %>
 	</div>
-	<h5>Цена (грн.)</h5>
+	<%= image_tag ("price.png") %>
 	<div class="multiselect">
 		<a href="#">200-300 </a>
 		<a href="#">300-400 </a>
@@ -21,25 +21,25 @@
 		<a href="#">700-800 </a>
 		<a href="#">900-1000 </a>
 	</div>
-	<h5>Ширина</h5>
+	<%= image_tag ("width.png") %>
 	<div class="multiselect">
 		<% @width.each do |w| %>
 			<%= link_to "#{w.name_us}", width_path(w) %>
 		<% end %>
 	</div>
-	<h5>Категория</h5>
+	<%= image_tag ("category.png") %>
 	<div class="multiselect">
 		<% @categories.each do |c| %>
 			<%= link_to "#{c.name_us}", category_path(c) %>
 		<% end %>
 	</div>
-	<h5>Цвет</h5>
+	<%= image_tag ("color.png") %>
 	<div class="multiselect">
 		<% @colors.each do |c| %>
 			<%= link_to "#{c.name_us}", color_path(c) %>
 		<% end %>
 	</div>
-	<h5>Материал</h5>
+	<%= image_tag ("material.png") %>
 	<div class="multiselect">
 		<% @materials.each do |m| %>
 			<%= link_to "#{m.name_us}", material_path(m) %>
