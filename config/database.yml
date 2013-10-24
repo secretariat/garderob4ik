@@ -31,15 +31,6 @@ development:
 #   password:
 #   socket: /var/lib/mysql/mysql.sock
 
-production:
-  adapter: mysql2
-  encoding: utf8
-  reconnect: false
-  database: garderob
-  pool: 5
-  username: root
-  password:
-  socket: /var/lib/mysql/mysql.sock
 # production:
 #   adapter: mysql2
 #   encoding: utf8
@@ -47,12 +38,21 @@ production:
 #   database: garderob
 #   pool: 5
 #   username: root
-#   password: ctrhtnfhbfn
-#   socket: /var/run/mysqld/mysqld.sock
-#   queue:
-#     adapter: mysql2
-#     encoding: utf8
-#     database: garderob
-#     username: root
-#     password: ctrhtnfhbfn
-#     socket: /var/run/mysqld/mysqld.sock
+#   password:
+#   socket: /var/lib/mysql/mysql.sock
+production:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: garderob
+  pool: 5
+  username: root
+  password: ctrhtnfhbfn
+  socket: /var/run/mysqld/mysqld.sock
+  queue:
+    adapter: mysql2
+    encoding: utf8
+    database: garderob
+    username: root
+    password: ctrhtnfhbfn
+    socket: /var/run/mysqld/mysqld.sock
